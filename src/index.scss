@@ -1,26 +1,4 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-$colors: (
-  "primary": #0071FF,
-  "neutral-dark": #303030,
-  "neutral-light": #fff,
-);
-
-$font-sizes: (
-  "h1": 36px,
-  "h2": 24px,
-  "h3": 18px,
-  "regular": 16px,
-  "sub1": 14px,
-  "sub2": 12px,
-  "sub3": 10px
-);
-
+@import "styles/reset.scss";
+@import "styles/colors.scss";
+@import "styles/font-sizes.scss";
+@import "styles/functions.scss";
