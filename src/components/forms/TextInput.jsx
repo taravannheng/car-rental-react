@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function TextInput({ label, placeholder }) {
+function TextInput({ label, placeholder, isRequired }) {
   const [textInput, setTextInput] = useState('')
 
   const handleChange = (e) => {
@@ -10,7 +10,7 @@ function TextInput({ label, placeholder }) {
   return (
     <label className='form__label'>
       {label}
-      <input type="text" placeholder={placeholder} onChange={handleChange} value={textInput} className="form__input input__text"/>
+      <input type="text" placeholder={placeholder} onChange={handleChange} value={textInput} className="form__input input__text" required={isRequired && 'required'}/>
     </label>
   )
 }

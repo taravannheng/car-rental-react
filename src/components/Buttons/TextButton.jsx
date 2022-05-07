@@ -1,6 +1,6 @@
-function TextButton({ children, isDisabled }) {
+function TextButton({ children, isDisabled, isRequired }) {
   return (
-    <button type="button" className={`button text-button ${isDisabled && 'button--disabled'}`}>{children}</button>
+    <button type="button" className={`button text-button ${isDisabled && 'button--disabled'}`}  required={isRequired && 'required'}>{children}</button>
   )
 }
 
