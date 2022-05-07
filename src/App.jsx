@@ -1,9 +1,9 @@
-import PrimaryButton from "./components/Buttons/PrimaryButton";
+import TextButton from "./components/Buttons/TextButton";
 
 function App() {
   return (
    <>
-     <PrimaryButton>Test</PrimaryButton>
+     <TextButton>Test</TextButton>
    </>
   );
 }
