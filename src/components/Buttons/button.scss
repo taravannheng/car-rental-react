@@ -5,6 +5,10 @@
   border-radius: 8px;
   text-transform: uppercase;
   cursor: pointer;
+
+  &--disabled {
+    opacity: 0.5;
+  }
 }
 
 .primary-button {
@@ -12,10 +16,6 @@
   background-color: color(primary);
   border: 0;
   font-size: font-size(h3);
-
-  &--disabled {
-    opacity: 0.5;
-  }
 }
 
 .text-button {
