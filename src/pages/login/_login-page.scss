@@ -1,0 +1,15 @@
+.login {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+
+  &__banner {
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+}
