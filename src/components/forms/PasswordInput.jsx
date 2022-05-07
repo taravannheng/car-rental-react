@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function PasswordInput({ label }) {
+function PasswordInput({ label, isRequired }) {
   const [passwordInput, setPasswordInput] = useState('')
 
   const handleChange = (e) => {
@@ -8,10 +8,10 @@ function PasswordInput({ label }) {
   }
 
   return (
-    <label className='form__label'>
-      {label}
-      <input type="password" onChange={handleChange} value={passwordInput} className="form__input input__password"/>
-    </label>
+    <div className="form__control">
+      <label className='form__label'>{label}</label>
+      <input type="password" onChange={handleChange} value={passwordInput} className="form__input input__password" required={isRequired && 'required'}/>
+    </div>
   )
 }
 

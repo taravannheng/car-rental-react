@@ -8,10 +8,10 @@ function TextInput({ label, placeholder, isRequired }) {
   }
 
   return (
-    <label className='form__label'>
-      {label}
+    <div className="form__control">
+      <label className='form__label'>{label}</label>
       <input type="text" placeholder={placeholder} onChange={handleChange} value={textInput} className="form__input input__text" required={isRequired && 'required'}/>
-    </label>
+    </div>
   )
 }
 

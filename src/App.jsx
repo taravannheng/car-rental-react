@@ -1,9 +1,11 @@
-import PasswordInput from "./components/forms/PasswordInput";
+import TextInput from './components/forms/TextInput'
+import PasswordInput from './components/forms/PasswordInput'
 
 function App() {
   return (
    <>
-    <PasswordInput label="Password" isRequired={true}/>
+    <TextInput label="Email" placeholder="Email" isRequired={true} errorMessage="Email is required!" />
+    <PasswordInput label="Password" isRequired={true} errorMessage="Password is required!" />
    </>
   );
 }

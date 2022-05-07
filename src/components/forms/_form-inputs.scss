@@ -1,6 +1,10 @@
-.form__label {
+.form__control {
   display: flex;
   flex-direction: column;
+  width: clamp(100px, 100%, 460px);
+}
+
+.form__label {
   font-family: inherit;
   font-size: font-size(h3);
   font-weight: 500;
@@ -11,8 +15,9 @@
   height: 40px;
   border-radius: 8px;
   border: 2px solid color(neutral-dark);
-  margin-top: 12px;
+  margin-top: 4px;
   padding: 8px;
+  width: clamp(100px, 100%, 460px);
 
   &:focus {
     outline-color: color(primary);
