@@ -13,4 +13,8 @@
   border: 2px solid color(neutral-dark);
   margin-top: 12px;
   padding: 8px;
+
+  &:focus {
+    outline-color: color(primary);
+  }
 }
