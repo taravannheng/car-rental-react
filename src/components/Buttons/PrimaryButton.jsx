@@ -1,6 +1,6 @@
-function PrimaryButton({ children }) {
+function PrimaryButton({ children, isDisabled }) {
   return (
-    <button className="button primary-button" type="button">{children}</button>
+    <button className={`button primary-button ${isDisabled === "True" && 'primary-button--disabled'}`} type="button">{children}</button>
   )
 }
 

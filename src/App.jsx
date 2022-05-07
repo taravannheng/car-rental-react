@@ -1,9 +1,9 @@
-import TextButton from "./components/buttons/TextButton";
+import PrimaryButton from "./components/buttons/PrimaryButton";
 
 function App() {
   return (
    <>
-     <TextButton>Test</TextButton>
+     <PrimaryButton isDisabled="True">Test Button</PrimaryButton>
    </>
   );
 }
