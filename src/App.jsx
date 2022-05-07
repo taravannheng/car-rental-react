@@ -1,4 +1,4 @@
-import PrimaryButton from "./components/Button/PrimaryButton";
+import PrimaryButton from "./components/Buttons/PrimaryButton";
 
 function App() {
   return (
