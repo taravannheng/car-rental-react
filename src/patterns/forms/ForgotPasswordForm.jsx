@@ -28,7 +28,7 @@ function ForgotPasswordForm() {
         <label className='form__label'>Email</label>
         <input type="email" placeholder="Enter your email..." onChange={handleEmailChange} value={email} className="form__input input__text" required/>
       </div>
-      <button className='button primary-button' type="submit">Submit</button>
+      <button className='button primary-button' type="submit">Reset Password</button>
       <DividerWithText text="OR" />
       <Link to="/signin" className='button text-button'>Sign In</Link>
     </form>
