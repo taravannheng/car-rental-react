@@ -10,6 +10,7 @@ function LogInForm() {
 
   const firebaseApp = useContext(FirebaseContext)
   const auth = getAuth(firebaseApp)
+  // const auth = getAuth()
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
