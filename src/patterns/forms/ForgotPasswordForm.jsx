@@ -1,11 +1,16 @@
 import { useState } from "react"
-import { Link } from 'react-router-dom'
+import { getAuth, sendPasswordResetEmail } from 'firebase/auth'
+import { Link, useNavigate } from 'react-router-dom'
 import DividerWithText from '../../components/Divider/DividerWithText'
 
 
 function ForgotPasswordForm() {
 
   const [email, setEmail] = useState("")
+
+  const auth = getAuth()
+
+  const navigate = useNavigate()
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value)
@@ -15,8 +20,9 @@ function ForgotPasswordForm() {
     e.preventDefault();
 
     try {
-      
-
+      sendPasswordResetEmail(auth, email)
+      alert("Reset link has been sent to your email!")
+      navigate('/signin')
     } catch (error) {
       console.log(error);
     }
