@@ -54,6 +54,7 @@ function LogInForm() {
         <input type="password" onChange={handlePasswordChange} value={password} className="form__input input__text" required/>
       </div>
       <button className='button primary-button' type="submit">Sign In</button>
+      <Link to="/forgot-password" className='button text-button'>Reset Password</Link>
       <DividerWithText text="OR" />
       <Link to="/signup" className='button text-button'>Sign Up</Link>
     </form>
