@@ -1,6 +1,7 @@
 import LogInForm from "../../patterns/Forms/LogInForm"
 
-function LoginPage() {
+function LogInPage() {
+
   return (
     <div className='login'>
       <div className="login__overlay"></div>
@@ -13,4 +14,4 @@ function LoginPage() {
   )
 }
 
-export default LoginPage
+export default LogInPage

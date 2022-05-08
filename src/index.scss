@@ -6,8 +6,10 @@
 
 // COMPONENTS
 @import "components/buttons/button.scss";
-@import "components/forms/form-inputs.scss";
 @import "components/divider/divider.scss";
+
+// PATTERNS
+@import "patterns/Forms/signup-form";
 
 // PAGES
 @import "pages/login/login-page";
