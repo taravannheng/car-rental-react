@@ -1,4 +1,5 @@
 .login {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,6 +10,14 @@
   background-size: cover;
   background-position: center;
 
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: color(neutral-dark);
+    opacity: 0.3;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -17,6 +26,7 @@
     width: clamp(420px, 540px, 540px);
     padding: 40px;
     background-color: color(neutral-light);
+    z-index: 1;
   }
 
   &__logo {
