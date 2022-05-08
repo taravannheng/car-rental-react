@@ -1,13 +1,29 @@
-import { useState } from 'react'
-import { Link } from "react-router-dom"
+import { useState, useContext } from 'react'
+import { useNavigate, Link } from "react-router-dom"
 import DividerWithText from "../../components/Divider/DividerWithText"
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import FirebaseContext from "../../components/Firebase/firebaseContext"
+import * as ROUTES from '../../constants/routes'
 
 function LogInForm() {
+  const navigate = useNavigate()
+
+  const firebaseApp = useContext(FirebaseContext)
+  const auth = getAuth(firebaseApp)
+
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
-  const handleLogIn = (e) => {
+  const handleLogIn = async (e) => {
     e.preventDefault()
+
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password)
+
+      if (userCredential.user) navigate(ROUTES.HOME)
+    } catch (error) {
+      alert("Wrong Credentials")
+    }
   }
 
   const handleEmailChange = (e) => {
