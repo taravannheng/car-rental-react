@@ -32,7 +32,7 @@ function SignUpForm() {
       // const user = userCredential.user
       
       createUserWithEmailAndPassword(auth, email, password) 
-      navigate("/login")
+      navigate("/signin")
 
     } catch (error) {
       console.log(error);
