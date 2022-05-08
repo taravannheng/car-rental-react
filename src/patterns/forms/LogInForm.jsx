@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from "react-router-dom"
 import DividerWithText from "../../components/Divider/DividerWithText"
 
 function LogInForm() {
@@ -29,7 +30,7 @@ function LogInForm() {
       </div>
       <button className='button primary-button' type="submit">Sign In</button>
       <DividerWithText text="OR" />
-      <button className='button text-button' type="button">Sign Up</button>
+      <Link to="/signup" className='button text-button'>Sign Up</Link>
     </form>
   )
 }

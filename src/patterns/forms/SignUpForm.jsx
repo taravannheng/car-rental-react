@@ -1,5 +1,5 @@
 import { useState, useContext } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import FirebaseContext from "../../components/Firebase/firebaseContext"
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"
 import DividerWithText from '../../components/Divider/DividerWithText'
@@ -51,7 +51,7 @@ function SignUpForm() {
       </div>
       <button className='button primary-button' type="submit">Sign Up</button>
       <DividerWithText text="OR" />
-      <button className='button text-button' type="button">Sign In</button>
+      <Link to="/signin" className='button text-button'>Sign In</Link>
     </form>
   )
 }
