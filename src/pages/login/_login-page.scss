@@ -39,3 +39,12 @@
     }
   }
 }
+
+@media only screen and (max-width: breakpoint(small)) {
+  .login {
+
+    &__container {
+      width: clamp(420px, 420px, 420px);
+    }
+  }
+}
