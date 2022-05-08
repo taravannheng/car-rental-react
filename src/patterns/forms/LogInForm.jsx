@@ -27,7 +27,7 @@ function LogInForm() {
         <label className='form__label'>Password</label>
         <input type="password" onChange={handlePasswordChange} value={password} className="form__input input__text" required/>
       </div>
-      <button className='button primary-button' type="submit">Log In</button>
+      <button className='button primary-button' type="submit">Sign In</button>
       <DividerWithText text="OR" />
       <button className='button text-button' type="button">Sign Up</button>
     </form>
