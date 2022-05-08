@@ -1,4 +1,4 @@
-import LogInForm from "../../patterns/forms/LogInForm"
+import LogInForm from "../../patterns/Forms/LogInForm"
 
 function LoginPage() {
   return (

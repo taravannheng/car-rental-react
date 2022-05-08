@@ -1,8 +1,12 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import LogInPage from "./pages/login/LogInPage";
-import SignUpPage from "./pages/signup/SignUpPage";
-import Home from "./pages/home/Home";
+import LogInPage from "./pages/Login/LogInPage";
+import SignUpPage from "./pages/Signup/SignUpPage";
+import Home from "./pages/Home/Home";
 import * as ROUTES from './constants/routes'
+import firebaseConfig from './components/Firebase/Firebase';
+import { initializeApp } from "firebase/app"
+
+initializeApp(firebaseConfig)
 
 function App() {
   return (

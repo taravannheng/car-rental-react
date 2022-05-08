@@ -1,6 +1,6 @@
-import DividerWithText from '../../components/divider/DividerWithText'
-import EmailInput from '../../components/forms/EmailInput'
-import PasswordInput from '../../components/forms/PasswordInput'
+import DividerWithText from '../../components/Divider/DividerWithText'
+import EmailInput from '../../components/Forms/EmailInput'
+import PasswordInput from '../../components/Forms/PasswordInput'
 
 function LogInForm() {
 

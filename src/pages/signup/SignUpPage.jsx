@@ -1,4 +1,4 @@
-import SignUpForm from "../../patterns/forms/SignUpForm"
+import SignUpForm from "../../patterns/Forms/SignUpForm"
 
 function SignUpPage() {
   return (
