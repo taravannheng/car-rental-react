@@ -4,6 +4,7 @@ import DividerWithText from "../../components/Divider/DividerWithText"
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import FirebaseContext from "../../components/Firebase/firebaseContext"
 import * as ROUTES from '../../constants/routes'
+import UserAuthContext from '../../contexts/userAuthContext';
 
 function LogInForm() {
   const navigate = useNavigate()
@@ -11,6 +12,8 @@ function LogInForm() {
   const firebaseApp = useContext(FirebaseContext)
   const auth = getAuth(firebaseApp)
   // const auth = getAuth()
+
+  const { setLoggedIn } = useContext(UserAuthContext)
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -21,7 +24,12 @@ function LogInForm() {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password)
 
-      if (userCredential.user) navigate(ROUTES.HOME)
+      if (userCredential.user) {
+
+        setLoggedIn(true)
+
+        navigate(ROUTES.HOME)
+      }
     } catch (error) {
       alert("Wrong Credentials")
     }

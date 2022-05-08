@@ -5,11 +5,13 @@ import Home from "./pages/Home/Home";
 import * as ROUTES from './constants/routes'
 import { FirebaseProvider } from './components/Firebase/firebaseContext';
 import PrivateRoute from './components/Routes/PrivateRoute';
+import { UserAuthProvider } from './contexts/userAuthContext'
 
 function App() {
   return (
    <>
     <FirebaseProvider>
+    <UserAuthProvider>
       <Router>
         <Routes>
           <Route path={ROUTES.LANDING} element={<SignUpPage />} />
@@ -20,6 +22,7 @@ function App() {
           <Route path={ROUTES.SIGNUP} element={<SignUpPage />} />
         </Routes>
       </Router>
+    </UserAuthProvider>
     </FirebaseProvider>
    </>
   );
