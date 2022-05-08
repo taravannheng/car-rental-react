@@ -2,16 +2,17 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import LogInPage from "./pages/login/LogInPage";
 import SignUpPage from "./pages/signup/SignUpPage";
 import Home from "./pages/home/Home";
+import * as ROUTES from './constants/routes'
 
 function App() {
   return (
    <>
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/login" element={<LogInPage />} />
-        <Route path="/signup" element={<SignUpPage />} />
+        <Route path={ROUTES.LANDING} element={<Home />} />
+        <Route path={ROUTES.HOME} element={<Home />} />
+        <Route path={ROUTES.LOGIN} element={<LogInPage />} />
+        <Route path={ROUTES.SIGNUP} element={<SignUpPage />} />
       </Routes>
     </Router>
    </>
