@@ -1,4 +1,3 @@
-import LogoLight from '../../assets/images/logo-light.png'
 import PrimaryButton from '../../components/buttons/PrimaryButton'
 import TextButton from '../../components/buttons/TextButton'
 import DividerWithText from '../../components/divider/DividerWithText'
