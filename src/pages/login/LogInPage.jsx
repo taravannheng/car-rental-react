@@ -7,15 +7,17 @@ import PasswordInput from '../../components/forms/PasswordInput'
 function LoginPage() {
   return (
     <div className='login'>
-      <div className="login__logo">
+      <div className="login__container">
+        <div className="login__logo">
+        </div>
+        <form className="form login__form">
+          <TextInput label="Email" placeholder="Enter your email..." isRequired={true} />
+          <PasswordInput label="Password" isRequired={true} />
+          <PrimaryButton>Log In</PrimaryButton>
+          <DividerWithText text="OR" />
+          <TextButton>Sign Up</TextButton>
+        </form>
       </div>
-      <form className="form login__form">
-        <TextInput label="Email" placeholder="Enter your email..." isRequired={true} />
-        <PasswordInput label="Password" isRequired={true} />
-        <PrimaryButton>LOGIN</PrimaryButton>
-        <DividerWithText text="OR" />
-        <TextButton>SIGNUP</TextButton>
-      </form>
     </div>
   )
 }
