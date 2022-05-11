@@ -27,13 +27,7 @@ function Home() {
   return (
     <main>
       <div className="product-container">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        {cars != null ? cars.map(car => <ProductCard productDetails={car} key={car.id}/>) : <p>There is no product at the moment</p>}
       </div>
     </main>
     

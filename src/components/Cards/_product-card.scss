@@ -57,38 +57,10 @@
     }
   }
 
-  &__add-to-cart button {
-    min-width: 130px;
-    width: 130px;
-    max-width: 130px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-
-    &:hover {
-      background-color: color(warning);
-    }
-
-    //          MODIFIERS           //
-    &--unavailable {
-      background-color: color(warning);
-
-      //          PSEUDO CLASSES          //
-
-      &:hover {
-          background-color: color(warning); //should change to darker
-      }
-    }
-
-
-    &--added {
-      background-color: color(primary); //should change to different color
-
-      //          PSEUDO CLASSES          //
-
-      &:hover {
-          background-color: color(primary);
-      }
-    }
+  &__add-to-cart {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 20px;
   }
 }
 
@@ -103,5 +75,25 @@
 
   .description__text {
     margin: 0;
+  }
+}
+
+.button__add-to-cart {
+  min-width: 130px;
+  width: 130px;
+  max-width: 130px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 0;
+  color: color(neutral-light);
+  cursor: pointer;
+
+  &--unavailable {
+    background-color: color(warning);
+  }
+
+  &--available {
+    background-color: color(primary);
   }
 }
