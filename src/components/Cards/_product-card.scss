@@ -1,0 +1,99 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  font-family: inherit;
+  color: color(neutral-dark);
+
+  //          PSEUDO CLASSES      //
+
+  &:hover {
+      transform: scale(1.02);
+  }
+
+  //          ELEMENTS            //
+
+  &__media {
+      min-width: 100%;
+      width: 100%;
+      max-width: 100%;
+      height: 200px;
+      margin-bottom: 15px;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+  }
+
+  &__content {
+    .content__title {
+      font-size: font-size(h2);
+      font-weight: 700;
+      margin: 0 0 15px 10px;
+    }
+
+    .content__details {
+      display: flex;
+      padding: 0 10px;
+      margin-bottom: 15px;
+      overflow: hidden;
+
+      font-size: font-size(sub1);
+      line-height: 28px;
+
+      .details__labels, .details__texts {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+      }
+
+      .details__labels {
+        margin-right: 10px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__add-to-cart {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 20px;
+  }
+}
+
+.details__description {
+  font-size: font-size(sub1);
+  color: color(neutral-dark);
+  line-height: 22px;
+  height: clamp(100px, 100px, 100px);
+  padding: 0 10px;
+  margin-bottom: 15px;
+  overflow-x: hidden;
+
+  .description__text {
+    margin: 0;
+  }
+}
+
+.button__add-to-cart {
+  min-width: 130px;
+  width: 130px;
+  max-width: 130px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 0;
+  color: color(neutral-light);
+  cursor: pointer;
+
+  &--unavailable {
+    background-color: color(warning);
+  }
+
+  &--available {
+    background-color: color(primary);
+  }
+}

@@ -1,9 +1,15 @@
 import { useEffect, useState } from 'react'
 import { getFirestore, doc, getDoc } from 'firebase/firestore'
 import Header from '../../patterns/Header/Header'
+import ProductCard from '../../components/Cards/ProductCard'
 
 function Home() {
-  const [imgUrls, setImgUrls] = useState(null)
+  // firestore rename: 
+  // collection: images -> products
+  // document: cars -> cars
+  // field: imgUrls -> carDetails 
+
+  const [cars, setCars] = useState(null)
 
   const db = getFirestore()
 
@@ -13,14 +19,21 @@ function Home() {
     getDoc(docRef).then((doc) => {
       const { imgUrls } = doc.data()
 
-      setImgUrls(imgUrls)
+      setCars(imgUrls)
     })
 
     // eslint-disable-next-line
   }, [])
 
   return (
-    <Header />
+    <>
+      <Header />
+      <main>
+        <div className="product-container">
+          {cars != null ? cars.map(car => <ProductCard productDetails={car} key={car.id}/>) : <p>There is no product at the moment</p>}
+        </div>
+      </main>
+    </>
   )
 }
 
