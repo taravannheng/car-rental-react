@@ -8,10 +8,14 @@ function ProductCard({ productDetails }) {
   const handleAddToCart = (e) => {
     if (productDetails.availability) {
 
-      //add product to context
-      setCart(...cart, productDetails.id)
+      //add or remove product from context
+      if (e.target.classList.contains("button__add-to-cart--added")) {
+        setCart(cart.filter((id, index) => id !== productDetails.id))
+      } else {
+        setCart([...cart, productDetails.id])  
+      }
 
-      //update the classname to --added or change opacity?
+      //update the classname
       e.target.classList.toggle("button__add-to-cart--added")
 
       //change text

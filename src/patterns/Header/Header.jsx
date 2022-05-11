@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import CartContext from '../../contexts/cartContext'
 
 function Header() {
