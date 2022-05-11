@@ -2,11 +2,11 @@ function ProductCard({ productDetails }) {
 
   const handleAddToCart = (e) => {
     if (productDetails.availability) {
-      console.log("hi");
 
       //add product to context
 
       //update the classname to --added or change opacity?
+      e.target.classList.toggle("button__add-to-cart--added")
     }
   }
 
