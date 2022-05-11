@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { getFirestore, doc, getDoc } from 'firebase/firestore'
+import Header from '../../patterns/Header/Header'
 
 function Home() {
   const [imgUrls, setImgUrls] = useState(null)
@@ -19,7 +20,7 @@ function Home() {
   }, [])
 
   return (
-    <div>home</div>
+    <Header />
   )
 }
 
