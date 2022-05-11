@@ -1,9 +1,15 @@
+import { useContext } from 'react'
+import CartContext from "../../contexts/cartContext"
+
 function ProductCard({ productDetails }) {
+
+  const { cart, setCart } = useContext(CartContext)
 
   const handleAddToCart = (e) => {
     if (productDetails.availability) {
 
       //add product to context
+      setCart(...cart, productDetails.id)
 
       //update the classname to --added or change opacity?
       e.target.classList.toggle("button__add-to-cart--added")
