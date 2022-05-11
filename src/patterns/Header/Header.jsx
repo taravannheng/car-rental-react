@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useContext, useEffect, useState } from 'react'
 import CartContext from '../../contexts/cartContext'
+import * as ROUTES from '../../constants/routes'
 
 function Header() {
   const { cart } = useContext(CartContext)
@@ -13,7 +14,7 @@ function Header() {
             <span className="">Car Rental Center</span>
         </h1>
 
-        <Link to='/home' className='header__cart'>
+        <Link to={cart.length !== 0 && ROUTES.CART} className='header__cart'>
           <span>Cart</span>
           <div className="counter">
             <span className="counter__text">{cart.length}</span>
