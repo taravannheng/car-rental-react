@@ -1,8 +1,14 @@
 import { useEffect, useState } from 'react'
 import { getFirestore, doc, getDoc } from 'firebase/firestore'
+import ProductCard from '../../components/Cards/ProductCard'
 
 function Home() {
-  const [imgUrls, setImgUrls] = useState(null)
+  // firestore rename: 
+  // collection: images -> products
+  // document: cars -> cars
+  // field: imgUrls -> carDetails 
+
+  const [cars, setCars] = useState(null)
 
   const db = getFirestore()
 
@@ -12,14 +18,14 @@ function Home() {
     getDoc(docRef).then((doc) => {
       const { imgUrls } = doc.data()
 
-      setImgUrls(imgUrls)
+      setCars(imgUrls)
     })
 
     // eslint-disable-next-line
   }, [])
 
   return (
-    <div>home</div>
+    <ProductCard />
   )
 }
 
