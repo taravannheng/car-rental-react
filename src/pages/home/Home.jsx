@@ -27,6 +27,13 @@ function Home() {
   return (
     <main>
       <div className="product-container">
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
       </div>
     </main>
     
