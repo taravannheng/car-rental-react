@@ -7,6 +7,13 @@ function ProductCard({ productDetails }) {
 
       //update the classname to --added or change opacity?
       e.target.classList.toggle("button__add-to-cart--added")
+
+      //change text
+      if (e.target.classList.contains("button__add-to-cart--added")) {
+        e.target.innerHTML = "Added to Cart"
+      } else {
+        e.target.innerHTML = "Add to Cart"
+      }
     }
   }
 
