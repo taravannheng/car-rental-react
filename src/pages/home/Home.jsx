@@ -25,7 +25,11 @@ function Home() {
   }, [])
 
   return (
-    <ProductCard />
+    <main>
+      <div className="product-container">
+      </div>
+    </main>
+    
   )
 }
 
