@@ -1,4 +1,4 @@
-import ForgotPasswordForm from "../../patterns/Forms/ForgotPasswordForm"
+import ForgotPasswordForm from "../../patterns/Forms1/ForgotPasswordForm"
 
 function ForgotPasswordPage() {
 
