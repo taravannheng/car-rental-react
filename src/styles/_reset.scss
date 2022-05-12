@@ -16,15 +16,3 @@ body {
   height: 100vh;
   overflow-x: hidden;
 }
-
-input[type="number"] {
-  -moz-appearance: textfield;
-
-  // ||           pseudo-elements         //
-
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-      appearance: none;
-      margin: 0;
-  }
-}

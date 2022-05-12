@@ -12,7 +12,7 @@ function ProductCard({ productDetails }) {
       if (e.target.classList.contains("button__add-to-cart--added")) {
         setCart(cart.filter((car, index) => car.id !== productDetails.id))
       } else {
-        setCart([...cart, productDetails])  
+        setCart([...cart, productDetails])
       }
 
       //update the classname
@@ -20,9 +20,9 @@ function ProductCard({ productDetails }) {
 
       //change text
       if (e.target.classList.contains("button__add-to-cart--added")) {
-        e.target.innerHTML = "Added to Cart"
+        e.target.innerText = "Added to Cart"
       } else {
-        e.target.innerHTML = "Add to Cart"
+        e.target.innerText = "Add to Cart"
       }
     }
   }

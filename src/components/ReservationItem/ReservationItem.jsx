@@ -25,7 +25,6 @@ function ReservationItem({ productDetails }) {
       }
     } else {
       messageEl.innerText = "Invalid Inputs!"
-      console.log("invalid");
     }
   }
 
