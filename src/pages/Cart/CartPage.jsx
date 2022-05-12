@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom'
 import * as ROUTES from '../../constants/routes'
 import Header from "../../patterns/Header/Header"
+import CartContext from '../../contexts/cartContext'
+import { useContext } from 'react'
 
 function CartPage() {
+  const { cart } = useContext(CartContext)
+
   return (
     <>
       <Header />
