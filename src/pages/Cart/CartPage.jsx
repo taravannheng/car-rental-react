@@ -1,6 +1,10 @@
+import Header from "../../patterns/Header/Header"
+
 function CartPage() {
   return (
-    <div>Cart</div>
+    <>
+      <Header />
+    </>
   )
 }
 

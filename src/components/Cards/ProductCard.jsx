@@ -10,9 +10,9 @@ function ProductCard({ productDetails }) {
 
       //add or remove product from context
       if (e.target.classList.contains("button__add-to-cart--added")) {
-        setCart(cart.filter((id, index) => id !== productDetails.id))
+        setCart(cart.filter((car, index) => car.id !== productDetails.id))
       } else {
-        setCart([...cart, productDetails.id])  
+        setCart([...cart, productDetails])  
       }
 
       //update the classname
