@@ -21,7 +21,7 @@ function CartPage() {
         </h1>
         <ul className="cart__labels">
             <li><span>Vehicle</span></li>
-            <li><span>Rental Days</span></li>
+            <li><span>Price Per Day</span></li>
             <li><span>Action</span></li>
         </ul>
         <div className="cart__reservation-list">

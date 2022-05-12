@@ -37,52 +37,6 @@
     }
   }
 
-  .rental-days-control {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-    //                  ELEMENTS
-
-    &__up-button {
-        margin-top: 5px;
-
-        cursor: pointer;
-    }
-
-    &__input {
-      width: 70px;
-      height: 25px;
-      border: 1px solid color(neutral-dark);
-      margin: 0 10px;
-      text-align: center;
-
-      border-radius: 5px;
-
-      @media only screen and (max-width: 800px) {
-        width: 50px;
-      }
-    }
-
-    &__down-button {
-        margin-top: -7.5px;
-
-        cursor: pointer;
-    }
-
-    &__message {
-        position: absolute;
-        top: 20px;
-        width: 180px;
-        font-size: font-size(sub2);
-        text-align: center;
-
-        color: color(warning);
-    }
-  }
-
   &__delete-button {
 
     button {
