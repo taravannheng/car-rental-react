@@ -3,7 +3,7 @@ import SignInPage from "./pages/Signin/SignInPage";
 import SignUpPage from './pages/Newpage/SignUpPage';
 import ForgotPasswordPage from "./pages/ForgotPassword/ForgotPasswordPage"
 import CartPage from './pages/Cart/CartPage';
-import Home from "./pages/Home/Home";
+import Home from "./pages/Home1/Home";
 import * as ROUTES from './constants/routes'
 import { FirebaseProvider } from './components/Firebase/firebaseContext';
 import PrivateRoute from './components/Routes/PrivateRoute';
