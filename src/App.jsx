@@ -9,6 +9,7 @@ import { FirebaseProvider } from './components/Firebase/firebaseContext';
 import PrivateRoute from './components/Routes/PrivateRoute';
 import { UserAuthProvider } from './contexts/userAuthContext'
 import { CartProvider } from './contexts/cartContext'
+import { CheckoutProvider } from './contexts/checkoutContext'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
     <FirebaseProvider>
     <UserAuthProvider>
     <CartProvider>
+    <CheckoutProvider>
       <Router>
         <Routes>
           <Route path={ROUTES.LANDING} element={<SignUpPage />} />
@@ -36,6 +38,7 @@ function App() {
           <Route path={ROUTES.FORGOTPASSWORD} element={<ForgotPasswordPage />} />
         </Routes>
       </Router>
+    </CheckoutProvider>
     </CartProvider>
     </UserAuthProvider>
     </FirebaseProvider>
