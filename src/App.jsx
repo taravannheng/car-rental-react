@@ -19,12 +19,12 @@ function App() {
       <Router>
         <Routes>
           <Route path={ROUTES.LANDING} element={<SignInPage />} />
-          <Route path={ROUTES.HOME} element={<PrivateRoute />}>
+          {/* <Route path={ROUTES.HOME} element={<PrivateRoute />}> */}
             <Route path={ROUTES.HOME} element={<Home />} />
-          </Route>
-          <Route path={ROUTES.CART} element={<PrivateRoute />}>
+          {/* </Route> */}
+          {/* <Route path={ROUTES.CART} element={<PrivateRoute />}> */}
             <Route path={ROUTES.CART} element={<CartPage />} />
-          </Route>
+          {/* </Route> */}
           <Route path={ROUTES.SIGNIN} element={<SignInPage />} />
           <Route path={ROUTES.SIGNUP} element={<SignUpPage />} />
           <Route path={ROUTES.FORGOTPASSWORD} element={<ForgotPasswordPage />} />
