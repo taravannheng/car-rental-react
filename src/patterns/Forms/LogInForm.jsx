@@ -56,7 +56,7 @@ function LogInForm() {
       <button className='button primary-button' type="submit">Sign In</button>
       <Link to="/forgot-password" className='button text-button'>Reset Password</Link>
       <DividerWithText text="OR" />
-      <Link to="/signup" className='button text-button'>Sign Up</Link>
+      <Link to={ROUTES.SIGNUP} className='button text-button'>Sign Up</Link>
     </form>
   )
 }

@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom"
 import FirebaseContext from "../../components/Firebase/firebaseContext"
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"
 import DividerWithText from '../../components/Divider/DividerWithText'
+import * as ROUTES from '../../constants/routes'
 
 
 function SignUpForm() {
@@ -27,12 +28,8 @@ function SignUpForm() {
     e.preventDefault();
 
     try {
-      // const userCredential = await createUserWithEmailAndPassword(auth, email, password) 
-
-      // const user = userCredential.user
-      
       createUserWithEmailAndPassword(auth, email, password) 
-      navigate("/signin")
+      navigate(ROUTES.SIGNIN)
 
     } catch (error) {
       console.log(error);
@@ -51,7 +48,7 @@ function SignUpForm() {
       </div>
       <button className='button primary-button' type="submit">Sign Up</button>
       <DividerWithText text="OR" />
-      <Link to="/signin" className='button text-button'>Sign In</Link>
+      <Link to={ROUTES.SIGNIN} className='button text-button'>Sign In</Link>
     </form>
   )
 }
