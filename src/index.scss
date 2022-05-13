@@ -12,6 +12,7 @@
 
 // PATTERNS
 @import "patterns/Forms/signup-form";
+@import "patterns/Forms/checkout-form";
 @import "patterns/Header/header";
 
 // PAGES
@@ -19,4 +20,5 @@
 @import "pages/Signup/signup-page";
 @import "pages/ForgotPassword/forgotpassword-page";
 @import "pages/Cart/cart-page";
+@import "pages/Checkout/checkout-page";
 @import "pages/Home/home";

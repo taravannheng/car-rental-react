@@ -1,0 +1,50 @@
+.checkout-form {
+  padding: 40px;
+  background-color: color(neutral-light);
+
+  & > *:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin: 0;
+    color: color(neutral-dark);
+    font-size: font-size(h2);
+  }
+
+  &__submit-button {
+    width: 100%;
+    padding: 15px 30px;
+    background-color: color(primary);
+    border: 0;
+    color: color(neutral-light);
+    cursor: pointer;
+    font-size: font-size(h3);
+  }
+
+  .input-control {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+
+    &__input {
+      width: 300px;
+      padding: 10px;
+    }
+
+    &__message {
+      position: absolute;
+      right: 0;
+      opacity: 0;
+      transition: transform 0.3s ease;
+      color: color(warning);
+
+      &--show {
+        transform: translateY(-30px);
+        opacity: 1;
+      }
+    }
+  }
+}
