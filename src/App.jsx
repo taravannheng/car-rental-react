@@ -3,6 +3,7 @@ import SignInPage from "./pages/Signin/SignInPage";
 import SignUpPage from './pages/Signup/SignUpPage';
 import ForgotPasswordPage from "./pages/ForgotPassword/ForgotPasswordPage"
 import CartPage from './pages/Cart/CartPage';
+import CheckoutPage from './pages/Checkout/CheckoutPage';
 import Home from "./pages/Home/Home";
 import * as ROUTES from './constants/routes'
 import { FirebaseProvider } from './components/Firebase/firebaseContext';
@@ -26,7 +27,7 @@ function App() {
             <Route path={ROUTES.CART} element={<CartPage />} />
           {/* </Route> */}
           {/* <Route path={ROUTES.CHECKOUT} element={<PrivateRoute />}> */}
-          {/* <Route path={ROUTES.CHECKOUT} element={<CheckoutPage />} /> */}
+          <Route path={ROUTES.CHECKOUT} element={<CheckoutPage />} />
           {/* </Route> */}
           {/* <Route path={ROUTES.CONFIRMATION} element={<PrivateRoute />}> */}
           {/* <Route path={ROUTES.CONFIRMATION} element={<ConfirmationPage />} /> */}
