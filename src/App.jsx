@@ -25,9 +25,18 @@ function App() {
           {/* <Route path={ROUTES.CART} element={<PrivateRoute />}> */}
             <Route path={ROUTES.CART} element={<CartPage />} />
           {/* </Route> */}
+          {/* <Route path={ROUTES.CHECKOUT} element={<PrivateRoute />}> */}
+          {/* <Route path={ROUTES.CHECKOUT} element={<CheckoutPage />} /> */}
+          {/* </Route> */}
+          {/* <Route path={ROUTES.CONFIRMATION} element={<PrivateRoute />}> */}
+          {/* <Route path={ROUTES.CONFIRMATION} element={<ConfirmationPage />} /> */}
+          {/* </Route> */}
           <Route path={ROUTES.SIGNIN} element={<SignInPage />} />
           <Route path={ROUTES.SIGNUP} element={<SignUpPage />} />
           <Route path={ROUTES.FORGOTPASSWORD} element={<ForgotPasswordPage />} />
+          <Route path={ROUTES.FORGOTPASSWORD} element={<ForgotPasswordPage />} />
+          {/* <Route path={ROUTES.NOTFOUND} element={<NotFoundPage />} /> */}
+
         </Routes>
       </Router>
     </CartProvider>
