@@ -54,7 +54,7 @@ function ProductCard({ productDetails }) {
       </div>
 
       <div className="card__add-to-cart">
-        <button type="button" onClick={handleAddToCart} id={productDetails.id} className={` button__add-to-cart ${productDetails.availability ? "button__add-to-cart--available" : "button__add-to-cart--unavailable"}`}>Add to Cart</button>
+        <button type="button" onClick={handleAddToCart} id={productDetails.id} className={` button__add-to-cart ${productDetails.availability ? "button__add-to-cart--available" : "button__add-to-cart--unavailable"}`}>{productDetails.availability ? 'Add to Cart' : 'Not Available'}</button>
       </div>
     </div>
   )
