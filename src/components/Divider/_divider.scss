@@ -1,0 +1,26 @@
+.divider__with-text {
+  position: relative;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  hr {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    color: color(neutral-dark);
+  }
+
+  p {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: color(neutral-light);
+    color: color(neutral-dark);
+    padding: 5px 40px;
+    font-size: font-size(sub2);
+  }
+}

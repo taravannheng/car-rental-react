@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { getAuth, sendPasswordResetEmail } from 'firebase/auth'
 import { Link, useNavigate } from 'react-router-dom'
-import DividerWithText from '../../components/Divider1/DividerWithText'
+import DividerWithText from "../../components/Divider/DividerWithText"
 
 
 function ForgotPasswordForm() {
