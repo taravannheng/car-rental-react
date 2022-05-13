@@ -20,6 +20,11 @@
     color: color(neutral-light);
     cursor: pointer;
     font-size: font-size(h3);
+
+    &--disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
   }
 
   .input-control {
@@ -32,18 +37,19 @@
     &__input {
       width: 300px;
       padding: 10px;
+      z-index: 1;
     }
 
     &__message {
       position: absolute;
       right: 0;
-      opacity: 0;
       transition: transform 0.3s ease;
       color: color(warning);
+      z-index: -1;
 
       &--show {
         transform: translateY(-30px);
-        opacity: 1;
+        z-index: 2;
       }
     }
   }
