@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { Navigate } from 'react-router-dom'
+import * as ROUTES from '../../constants/routes'
 
 function CheckoutForm() {
 
@@ -147,6 +149,8 @@ function CheckoutForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    return <Navigate to={ROUTES.CONFIRMATION} />
   }
 
   return (
