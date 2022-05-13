@@ -2,7 +2,7 @@ import { useState, useContext } from "react"
 import { useNavigate, Link } from "react-router-dom"
 import FirebaseContext from "../../components/Firebase/firebaseContext"
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"
-import DividerWithText from '../../components/Divider/DividerWithText'
+import DividerWithText from '../../components/Divider1/DividerWithText'
 import * as ROUTES from '../../constants/routes'
 
 
