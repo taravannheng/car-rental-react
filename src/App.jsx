@@ -5,6 +5,7 @@ import ForgotPasswordPage from "./pages/ForgotPassword/ForgotPasswordPage"
 import CartPage from './pages/Cart/CartPage';
 import CheckoutPage from './pages/Checkout/CheckoutPage';
 import ConfirmationPage from './pages/Confirmation/ConfirmationPage';
+import NotFoundPage from './pages/NotFound/NotFoundPage';
 import Home from "./pages/Home/Home";
 import * as ROUTES from './constants/routes'
 import { FirebaseProvider } from './components/Firebase/firebaseContext';
@@ -37,7 +38,7 @@ function App() {
           <Route path={ROUTES.SIGNUP} element={<SignUpPage />} />
           <Route path={ROUTES.FORGOTPASSWORD} element={<ForgotPasswordPage />} />
           <Route path={ROUTES.FORGOTPASSWORD} element={<ForgotPasswordPage />} />
-          {/* <Route path={ROUTES.NOTFOUND} element={<NotFoundPage />} /> */}
+          <Route path={ROUTES.NOTFOUND} element={<NotFoundPage />} />
 
         </Routes>
       </Router>
