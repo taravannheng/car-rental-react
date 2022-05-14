@@ -11,11 +11,13 @@ body {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   justify-content: center;
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
   width: 100vw;
   max-width: 1680px;
   height: 100vh;
+  padding: 0;
+  margin: 0;
+
+  font-family: "Roboto", sans-serif;
+  
   overflow-x: hidden;
 }
