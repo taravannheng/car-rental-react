@@ -10,6 +10,6 @@
   @return map-get($font-sizes, $font-size);
 }
 
-@function breakpoint($breakpoint) {
+@function setBreakpoint($breakpoint) {
   @return map-get($breakpoints, $breakpoint);
 }
