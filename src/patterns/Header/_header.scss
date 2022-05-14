@@ -22,7 +22,7 @@
     width: clamp(160px, 160px, 160px);
     height: clamp(160px, 160px, 160px);
 
-    @include backgroundImgStyles;
+    @include backgroundImgStyles(contain);
   }
 
   &__title {

@@ -7,7 +7,7 @@
   height: 100vh;
 
   background-image: url('../../assets/images/landing-page.jpg');
-  @include backgroundImgStyles;
+  @include backgroundImgStyles(cover);
 
   overflow: hidden;
 

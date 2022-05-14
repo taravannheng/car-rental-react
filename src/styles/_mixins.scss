@@ -5,8 +5,8 @@
   flex-direction: $direction;
 }
 
-@mixin backgroundImgStyles {
+@mixin backgroundImgStyles($size) {
   background-position: center;
-  background-size: cover;
+  background-size: $size;
   background-repeat: no-repeat;
 }
