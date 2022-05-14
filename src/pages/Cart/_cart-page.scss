@@ -1,3 +1,5 @@
+@use '../../styles/index' as *;
+
 .cart {
   width: clamp(100%, 100%, 1600px);
   padding-left: 100px;

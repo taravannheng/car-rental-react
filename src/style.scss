@@ -1,0 +1,20 @@
+// COMPONENTS
+@forward "./components/Buttons/button.scss";
+@forward "./components/Divider/divider.scss";
+@forward "./components/Cards/product-card.scss";
+@forward "./components/ReservationItem/reservation-item.scss";
+
+// PATTERNS
+@forward "./patterns/Forms/signup-form";
+@forward "./patterns/Forms/checkout-form";
+@forward "./patterns/Header/header";
+
+// PAGES
+@forward "./pages/Signin/signin-page";
+@forward "./pages/Signup/signup-page";
+@forward "./pages/ForgotPassword/forgotpassword-page";
+@forward "./pages/Cart/cart-page";
+@forward "./pages/Checkout/checkout-page";
+@forward "./pages/Confirmation/confirmation-page";
+@forward "./pages/NotFound/notfound-page";
+@forward "./pages/Home/home";
