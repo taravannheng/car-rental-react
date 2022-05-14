@@ -7,9 +7,7 @@
   height: 100vh;
 
   background-image: url('../../assets/images/landing-page.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  @include backgroundImgStyles;
 
   &__overlay {
     position: absolute;
@@ -36,9 +34,7 @@
     margin-bottom: 64px;
 
     background-image: url('../../assets/images/logo-light.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    @include backgroundImgStyles;
   }
 
   &__form {
