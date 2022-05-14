@@ -15,11 +15,11 @@
   }
 
   &__title {
-    font-size: font-size(h2);
+    font-size: setFontSize(h2);
     font-weight: 700;
 
     @media only screen and (max-width: 800px) {
-      font-size: font-size(h3);
+      font-size: setFontSize(h3);
     }
   }
 
@@ -39,7 +39,7 @@
       align-items: center;
       padding: 10px 20px;
 
-      font-size: font-size(normal);
+      font-size: setFontSize(normal);
       font-weight: 500;
       background-color: #f1f1f1;
 
@@ -48,7 +48,7 @@
       }
 
       @media only screen and (max-width: 800px) {
-        font-size: font-size(sub1);
+        font-size: setFontSize(sub1);
         padding: 10px;
       }
     }

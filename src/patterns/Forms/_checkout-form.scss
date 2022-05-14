@@ -11,7 +11,7 @@
   &__title {
     margin: 0;
     color: setColor(neutral-dark);
-    font-size: font-size(h2);
+    font-size: setFontSize(h2);
   }
 
   &__submit-button {
@@ -21,7 +21,7 @@
     border: 0;
     color: setColor(neutral-light);
     cursor: pointer;
-    font-size: font-size(h3);
+    font-size: setFontSize(h3);
 
     &--disabled {
       opacity: 0.5;

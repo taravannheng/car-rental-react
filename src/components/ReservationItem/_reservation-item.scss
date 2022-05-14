@@ -36,7 +36,7 @@
 
     .vehicle__details span {
       @media only screen and (max-width: 800px) {
-        font-size: font-size(sub1)
+        font-size: setFontSize(sub1)
       }
     }
   }
