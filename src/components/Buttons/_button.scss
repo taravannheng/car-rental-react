@@ -17,14 +17,14 @@
 }
 
 .primary-button {
-  color: color(neutral-light);
-  background-color: color(primary);
+  color: setColor(neutral-light);
+  background-color: setColor(primary);
   border: 0;
   font-size: font-size(h3);
 }
 
 .text-button {
-  color: color(primary);
+  color: setColor(primary);
   background-color: transparent;
   border: 0;
   font-size: font-size(h3);

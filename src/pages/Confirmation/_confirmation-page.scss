@@ -30,7 +30,7 @@
     width: 460px;
     padding: 40px;
     margin-top: -150px;
-    background-color: color(neutral-light);
+    background-color: setColor(neutral-light);
 
     @media only screen and (max-width: 800px) {
       width: 400px;
@@ -48,8 +48,8 @@
 
     &-back-button {
       padding: 10px 20px;
-      color: color(neutral-light);
-      background-color: color(primary);
+      color: setColor(neutral-light);
+      background-color: setColor(primary);
       text-decoration: none;
     }
   }

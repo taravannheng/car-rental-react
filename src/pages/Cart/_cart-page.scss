@@ -7,7 +7,7 @@
   padding-top: 50px;
   margin: 0;
 
-  color: color(neutral-dark);
+  color: setColor(neutral-dark);
 
   @media only screen and (max-width: 800px) {
     padding-left: 20px;
@@ -44,7 +44,7 @@
       background-color: #f1f1f1;
 
       &:not(:last-child) {
-        border-right: 2px solid color(neutral-light);
+        border-right: 2px solid setColor(neutral-light);
       }
 
       @media only screen and (max-width: 800px) {
@@ -72,8 +72,8 @@
 
     &-button {
       padding: 10px 30px;
-      color: color(neutral-light);
-      background-color: color(primary);
+      color: setColor(neutral-light);
+      background-color: setColor(primary);
       text-decoration: none;
 
       @media only screen and (max-width: 800px) {

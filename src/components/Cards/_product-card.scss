@@ -7,7 +7,7 @@
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   font-family: inherit;
-  color: color(neutral-dark);
+  color: setColor(neutral-dark);
 
   //          ELEMENTS            //
 
@@ -70,7 +70,7 @@
 
 .details__description {
   font-size: font-size(sub1);
-  color: color(neutral-dark);
+  color: setColor(neutral-dark);
   line-height: 22px;
   height: clamp(100px, 100px, 100px);
   padding: 0 10px;
@@ -94,7 +94,7 @@
   margin-bottom: 20px;
   padding: 10px;
   border: 0;
-  color: color(neutral-light);
+  color: setColor(neutral-light);
   cursor: pointer;
   transition: transform 0.3s ease;
 
@@ -103,11 +103,11 @@
   }
 
   &--unavailable {
-    background-color: color(warning);
+    background-color: setColor(warning);
   }
 
   &--available {
-    background-color: color(primary);
+    background-color: setColor(primary);
   }
 
   &--added {

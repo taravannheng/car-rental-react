@@ -12,7 +12,7 @@
     position: absolute;
     width: 100%;
     height: 1px;
-    color: color(neutral-dark);
+    color: setColor(neutral-dark);
   }
 
   p {
@@ -20,8 +20,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: color(neutral-light);
-    color: color(neutral-dark);
+    background-color: setColor(neutral-light);
+    color: setColor(neutral-dark);
     padding: 5px 40px;
     font-size: font-size(sub2);
   }

@@ -16,13 +16,13 @@
 .form__input {
   height: 40px;
   border-radius: 8px;
-  border: 2px solid color(neutral-dark);
+  border: 2px solid setColor(neutral-dark);
   margin-top: 4px;
   padding: 8px;
   width: clamp(100px, 100%, 460px);
   font-size: font-size(regular);
 
   &:focus {
-    outline-color: color(primary);
+    outline-color: setColor(primary);
   }
 }

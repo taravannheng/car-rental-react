@@ -12,7 +12,7 @@
   padding: 0 40px;
   overflow: hidden;
 
-  background-color: color(neutral-dark);
+  background-color: setColor(neutral-dark);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
   //          COMPONENTS           //
@@ -26,7 +26,7 @@
   }
 
   &__title {
-      color: color(neutral-light);
+      color: setColor(neutral-light);
 
       @media only screen and (max-width: 800px) {
         display: none;
@@ -39,8 +39,8 @@
     align-items: center;
     padding: 10px 20px;
     text-decoration: none;
-    background-color: color(primary);
-    color: color(neutral-light);
+    background-color: setColor(primary);
+    color: setColor(neutral-light);
 
     & > :first-child {
       margin-right: 10px;
@@ -52,8 +52,8 @@
       align-items: center;
       width: clamp(25px, 25px, 25px);
       height: clamp(25px, 25px, 25px);
-      background-color: color(neutral-light);
-      color: color(primary);
+      background-color: setColor(neutral-light);
+      color: setColor(primary);
       border-radius: 12.5px;
 
       & > .counter__text {

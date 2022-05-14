@@ -2,7 +2,7 @@
 @use './font-sizes' as *;
 @use './breakpoints' as *;
 
-@function color($color) {
+@function setColor($color) {
   @return map-get($colors, $color);
 }
 

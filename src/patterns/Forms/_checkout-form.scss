@@ -2,7 +2,7 @@
 
 .checkout-form {
   padding: 40px;
-  background-color: color(neutral-light);
+  background-color: setColor(neutral-light);
 
   & > *:not(:last-child) {
     margin-bottom: 40px;
@@ -10,16 +10,16 @@
 
   &__title {
     margin: 0;
-    color: color(neutral-dark);
+    color: setColor(neutral-dark);
     font-size: font-size(h2);
   }
 
   &__submit-button {
     width: 100%;
     padding: 15px 30px;
-    background-color: color(primary);
+    background-color: setColor(primary);
     border: 0;
-    color: color(neutral-light);
+    color: setColor(neutral-light);
     cursor: pointer;
     font-size: font-size(h3);
 
@@ -46,7 +46,7 @@
       position: absolute;
       right: 0;
       transition: transform 0.3s ease;
-      color: color(warning);
+      color: setColor(warning);
       z-index: -1;
 
       &--show {
