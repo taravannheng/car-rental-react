@@ -3,11 +3,14 @@
 .card {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
   font-family: inherit;
+
   color: setColor(neutral-dark);
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 
   //          ELEMENTS            //
 
@@ -25,13 +28,15 @@
 
   &__content {
     .content__title {
-      font-size: setFontSize(h2);
-      font-weight: 700;
       margin: 0 0 15px 10px;
 
+      font-size: setFontSize(h2);
+      font-weight: 700;
+
       @media only screen and (max-width: 500px) {
-        text-align: center;
         margin-bottom: 20px;
+
+        text-align: center;
       }
     }
 
@@ -39,10 +44,11 @@
       display: flex;
       padding: 0 10px;
       margin-bottom: 15px;
-      overflow: hidden;
 
       font-size: setFontSize(sub1);
       line-height: 28px;
+
+      overflow: hidden;
 
       @media only screen and (max-width: 500px) {
         display: none;
@@ -51,11 +57,13 @@
       .details__labels, .details__texts {
         padding: 0;
         margin: 0;
+
         list-style-type: none;
       }
 
       .details__labels {
         margin-right: 10px;
+
         font-weight: 500;
       }
     }
@@ -69,12 +77,15 @@
 }
 
 .details__description {
-  font-size: setFontSize(sub1);
-  color: setColor(neutral-dark);
-  line-height: 22px;
   height: clamp(100px, 100px, 100px);
   padding: 0 10px;
   margin-bottom: 15px;
+
+  font-size: setFontSize(sub1);
+  line-height: 22px;
+
+  color: setColor(neutral-dark);
+  
   overflow-x: hidden;
 
   @media only screen and (max-width: 500px) {
@@ -90,11 +101,13 @@
   min-width: 130px;
   width: 130px;
   max-width: 130px;
-  margin-left: 10px;
-  margin-bottom: 20px;
   padding: 10px;
   border: 0;
+  margin-left: 10px;
+  margin-bottom: 20px;
+
   color: setColor(neutral-light);
+  
   cursor: pointer;
   transition: transform 0.3s ease;
 
