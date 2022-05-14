@@ -26,8 +26,9 @@
   &__labels {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    list-style-type: none;
     padding-left: 0;
+
+    list-style-type: none;
 
     @media only screen and (max-width: 800px) {
       grid-template-columns: 2fr 1fr 1fr; 
@@ -39,6 +40,7 @@
 
       font-size: setFontSize(normal);
       font-weight: 500;
+
       background-color: #f1f1f1;
 
       &:not(:last-child) {
@@ -46,8 +48,9 @@
       }
 
       @media only screen and (max-width: 800px) {
-        font-size: setFontSize(sub1);
         padding: 10px;
+
+        font-size: setFontSize(sub1);
       }
     }
   }
@@ -68,9 +71,11 @@
 
     &-button {
       padding: 10px 30px;
-      color: setColor(neutral-light);
-      background-color: setColor(primary);
+
       text-decoration: none;
+      
+      background-color: setColor(primary);
+      color: setColor(neutral-light);
 
       @media only screen and (max-width: 800px) {
         padding: 10px 20px;
