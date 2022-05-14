@@ -3,9 +3,11 @@
 .checkout {
   @include flexCenter(row);
   height: calc(100vh - 120px);
+
   background-image: url('../../assets/images/landing-page.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  
   overflow: hidden;
 }
