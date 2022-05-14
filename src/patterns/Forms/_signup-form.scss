@@ -24,6 +24,8 @@
   
   font-size: setFontSize(regular);
 
+  //      PSEUDO CLASSES
+
   &:focus {
     outline-color: setColor(primary);
   }
