@@ -31,7 +31,7 @@
       margin: 0 0 15px 10px;
 
       font-size: setFontSize(h2);
-      font-weight: 700;
+      font-weight: setFontWeight(bold);
 
       //      MEDIA QUERIES
 
@@ -68,7 +68,7 @@
       .details__labels {
         margin-right: 10px;
 
-        font-weight: 500;
+        font-weight: setFontWeight(medium);
       }
     }
   }

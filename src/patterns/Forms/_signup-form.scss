@@ -9,7 +9,7 @@
 .form__label {
   font-family: inherit;
   font-size: setFontSize(h3);
-  font-weight: 400;
+  font-weight: setFontWeight(regular);
 
   opacity: 0.7;
 }
