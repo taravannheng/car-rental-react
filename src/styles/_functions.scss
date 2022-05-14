@@ -1,5 +1,6 @@
 @use './colors' as *;
 @use './font-sizes' as *;
+@use './font-weights' as *;
 @use './breakpoints' as *;
 
 @function setColor($color) {
@@ -8,6 +9,10 @@
 
 @function setFontSize($font-size) {
   @return map-get($font-sizes, $font-size);
+}
+
+@function setFontWeight($font-weight) {
+  @return map-get($font-weights, $font-weight);
 }
 
 @function setBreakpoint($breakpoint) {
