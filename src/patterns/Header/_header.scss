@@ -30,6 +30,8 @@
   &__title {
       color: setColor(neutral-light);
 
+      //      MEDIA QUERIES
+
       @media only screen and (max-width: 800px) {
         display: none;
       }
