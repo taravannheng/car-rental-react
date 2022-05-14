@@ -10,19 +10,21 @@
   width: 100%;
   height: clamp(120px, 120px, 120px);
   padding: 0 40px;
-  overflow: hidden;
 
   background-color: setColor(neutral-dark);
+
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 
   //          COMPONENTS           //
 
   &__logo {
+    width: clamp(160px, 160px, 160px);
+    height: clamp(160px, 160px, 160px);
+
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: clamp(160px, 160px, 160px);
-    height: clamp(160px, 160px, 160px);
   }
 
   &__title {
@@ -36,9 +38,11 @@
   &__cart {
     @include flexCenter(row);
     padding: 10px 20px;
-    text-decoration: none;
+
     background-color: setColor(primary);
     color: setColor(neutral-light);
+
+    text-decoration: none;
 
     & > :first-child {
       margin-right: 10px;
@@ -48,9 +52,10 @@
       @include flexCenter(row);
       width: clamp(25px, 25px, 25px);
       height: clamp(25px, 25px, 25px);
+      border-radius: 12.5px;
+
       background-color: setColor(neutral-light);
       color: setColor(primary);
-      border-radius: 12.5px;
 
       & > .counter__text {
         padding: 4px;
