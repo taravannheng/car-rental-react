@@ -14,7 +14,7 @@
   }
 
   & > li {
-    @include flexCenter(row);
+    @include flexCenter(column);
   }
 
   &__vehicle {
