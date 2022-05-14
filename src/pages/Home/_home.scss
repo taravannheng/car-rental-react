@@ -1,9 +1,7 @@
 @use '../../styles/index' as *;
 
 .home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter(row);
   margin-top: 100px;
   padding-bottom: 50px;
 

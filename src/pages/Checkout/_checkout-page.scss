@@ -1,9 +1,7 @@
 @use '../../styles/index' as *;
 
 .checkout {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter(row);
   height: calc(100vh - 120px);
   background-image: url('../../assets/images/landing-page.jpg');
   background-position: center;

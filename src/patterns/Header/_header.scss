@@ -34,9 +34,7 @@
   }
 
   &__cart {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter(row);
     padding: 10px 20px;
     text-decoration: none;
     background-color: setColor(primary);
@@ -47,9 +45,7 @@
     }
 
     .counter {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flexCenter(row);
       width: clamp(25px, 25px, 25px);
       height: clamp(25px, 25px, 25px);
       background-color: setColor(neutral-light);

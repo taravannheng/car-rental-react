@@ -3,9 +3,7 @@
 .divider__with-text {
   position: relative;
   height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter(row);
   overflow: hidden;
 
   hr {
@@ -17,9 +15,7 @@
 
   p {
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter(row);
     background-color: setColor(neutral-light);
     color: setColor(neutral-dark);
     padding: 5px 40px;
