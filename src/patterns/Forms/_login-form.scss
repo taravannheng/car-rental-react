@@ -10,16 +10,18 @@
   font-family: inherit;
   font-size: setFontSize(h3);
   font-weight: 500;
+
   opacity: 0.7;
 }
 
 .form__input {
-  height: 40px;
-  border-radius: 8px;
-  border: 2px solid setColor(neutral-dark);
-  margin-top: 4px;
-  padding: 8px;
   width: clamp(100px, 100%, 460px);
+  height: 40px;
+  padding: 8px;
+  border: 2px solid setColor(neutral-dark);
+  border-radius: 8px;
+  margin-top: 4px;
+  
   font-size: setFontSize(regular);
 
   &:focus {
