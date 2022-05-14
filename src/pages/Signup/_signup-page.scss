@@ -34,7 +34,7 @@
     margin-bottom: 64px;
 
     background-image: url('../../assets/images/logo-light.png');
-    @include backgroundImgStyles(cover);
+    @include backgroundImgStyles(contain);
   }
 
   &__form {
