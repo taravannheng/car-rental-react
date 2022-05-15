@@ -36,7 +36,7 @@
   }
 
   &__cart {
-    @include flexCenter(row);
+    @include flexCenter;
     padding: 10px 20px;
 
     background-color: setColor(primary);
@@ -49,7 +49,7 @@
     }
 
     .counter {
-      @include flexCenter(row);
+      @include flexCenter;
       width: clamp(25px, 25px, 25px);
       height: clamp(25px, 25px, 25px);
       border-radius: 12.5px;

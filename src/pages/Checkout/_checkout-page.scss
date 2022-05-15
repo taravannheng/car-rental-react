@@ -1,7 +1,7 @@
 @use '../../styles/index' as *;
 
 .checkout {
-  @include flexCenter(row);
+  @include flexCenter;
   height: calc(100vh - 120px);
 
   background-image: url('../../assets/images/landing-page.jpg');

@@ -2,7 +2,7 @@
 
 .confirmation {
   position: relative;
-  @include flexCenter(row);
+  @include flexCenter;
   width: clamp(100vw, 100vw, 1680px);
   height: 100vh;
 
