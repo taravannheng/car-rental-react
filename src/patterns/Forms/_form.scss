@@ -8,8 +8,8 @@
 
 .form__label {
   font-family: inherit;
-  font-size: setFontSize(h3);
-  font-weight: setFontWeight(medium);
+  font-size: set-font-size(h3);
+  font-weight: set-font-weight(medium);
 
   opacity: 0.7;
 }
@@ -18,15 +18,15 @@
   width: clamp(100px, 100%, 460px);
   height: 40px;
   padding: 8px;
-  border: 2px solid setColor(neutral-dark);
+  border: 2px solid set-color(neutral-dark);
   border-radius: 8px;
   margin-top: 4px;
   
-  font-size: setFontSize(regular);
+  font-size: set-font-size(regular);
 
   //      PSEUDO CLASSES
 
   &:focus {
-    outline-color: setColor(primary);
+    outline-color: set-color(primary);
   }
 }

@@ -3,18 +3,18 @@
 @use './font-weights' as *;
 @use './breakpoints' as *;
 
-@function setColor($color) {
+@function set-color($color) {
   @return map-get($colors, $color);
 }
 
-@function setFontSize($font-size) {
+@function set-font-ize($font-size) {
   @return map-get($font-sizes, $font-size);
 }
 
-@function setFontWeight($font-weight) {
+@function set-font-weight($font-weight) {
   @return map-get($font-weights, $font-weight);
 }
 
-@function setBreakpoint($breakpoint) {
+@function set-breakpoint($breakpoint) {
   @return map-get($breakpoints, $breakpoint);
 }

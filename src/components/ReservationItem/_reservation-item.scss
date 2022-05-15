@@ -39,7 +39,7 @@
       //      MEDIA QUERIES
 
       @media only screen and (max-width: 800px) {
-        font-size: setFontSize(sub1)
+        font-size: set-font-size(sub1)
       }
     }
   }
@@ -50,8 +50,8 @@
       padding: 10px 30px;
       border: 0;
       
-      background-color: setColor(warning);
-      color: setColor(neutral-light);
+      background-color: set-color(warning);
+      color: set-color(neutral-light);
 
       cursor: pointer;
 

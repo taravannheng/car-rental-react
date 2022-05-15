@@ -7,7 +7,7 @@
   padding-top: 50px;
   margin: 0;
 
-  color: setColor(neutral-dark);
+  color: set-color(neutral-dark);
 
   //      MEDIA QUERIES
 
@@ -17,13 +17,13 @@
   }
 
   &__title {
-    font-size: setFontSize(h2);
-    font-weight: setFontWeight(bold);
+    font-size: set-font-size(h2);
+    font-weight: set-font-weight(bold);
 
     //      MEDIA QUERIES
 
     @media only screen and (max-width: 800px) {
-      font-size: setFontSize(h3);
+      font-size: set-font-size(h3);
     }
   }
 
@@ -44,13 +44,13 @@
       @include flexCenter;
       padding: 10px 20px;
 
-      font-size: setFontSize(normal);
-      font-weight: setFontWeight(medium);
+      font-size: set-font-size(normal);
+      font-weight: set-font-weight(medium);
 
       background-color: #f1f1f1;
 
       &:not(:last-child) {
-        border-right: 2px solid setColor(neutral-light);
+        border-right: 2px solid set-color(neutral-light);
       }
 
       //      MEDIA QUERIES
@@ -58,7 +58,7 @@
       @media only screen and (max-width: 800px) {
         padding: 10px;
 
-        font-size: setFontSize(sub1);
+        font-size: set-font-size(sub1);
       }
     }
   }
@@ -84,8 +84,8 @@
 
       text-decoration: none;
       
-      background-color: setColor(primary);
-      color: setColor(neutral-light);
+      background-color: set-color(primary);
+      color: set-color(neutral-light);
 
       //      MEDIA QUERIES
 

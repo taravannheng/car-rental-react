@@ -11,7 +11,7 @@
   height: clamp(120px, 120px, 120px);
   padding: 0 40px;
 
-  background-color: setColor(neutral-dark);
+  background-color: set-color(neutral-dark);
 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   overflow: hidden;
@@ -26,7 +26,7 @@
   }
 
   &__title {
-      color: setColor(neutral-light);
+      color: set-color(neutral-light);
 
       //      MEDIA QUERIES
 
@@ -39,8 +39,8 @@
     @include flexCenter;
     padding: 10px 20px;
 
-    background-color: setColor(primary);
-    color: setColor(neutral-light);
+    background-color: set-color(primary);
+    color: set-color(neutral-light);
 
     text-decoration: none;
 
@@ -54,8 +54,8 @@
       height: clamp(25px, 25px, 25px);
       border-radius: 12.5px;
 
-      background-color: setColor(neutral-light);
-      color: setColor(primary);
+      background-color: set-color(neutral-light);
+      color: set-color(primary);
 
       & > .counter__text {
         padding: 4px;

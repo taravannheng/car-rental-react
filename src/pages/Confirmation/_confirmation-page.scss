@@ -27,7 +27,7 @@
     padding: 40px;
     margin-top: -150px;
 
-    background-color: setColor(neutral-light);
+    background-color: set-color(neutral-light);
 
     @media only screen and (max-width: 800px) {
       width: 400px;
@@ -50,8 +50,8 @@
 
       text-decoration: none;
 
-      background-color: setColor(primary);
-      color: setColor(neutral-light);
+      background-color: set-color(primary);
+      color: set-color(neutral-light);
     }
   }
 }

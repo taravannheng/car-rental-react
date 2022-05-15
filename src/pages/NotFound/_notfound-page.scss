@@ -27,7 +27,7 @@
     padding: 40px;
     margin-top: -150px;
 
-    background-color: setColor(neutral-light);
+    background-color: set-color(neutral-light);
 
     //      MEDIA QUERIES
     
@@ -50,8 +50,8 @@
     &-back-button {
       padding: 10px 20px;
 
-      background-color: setColor(primary);
-      color: setColor(neutral-light);
+      background-color: set-color(primary);
+      color: set-color(neutral-light);
 
       text-decoration: none;
     }

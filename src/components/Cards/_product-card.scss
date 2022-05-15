@@ -7,7 +7,7 @@
 
   font-family: inherit;
 
-  color: setColor(neutral-dark);
+  color: set-color(neutral-dark);
 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -30,8 +30,8 @@
     .content__title {
       margin: 0 0 15px 10px;
 
-      font-size: setFontSize(h2);
-      font-weight: setFontWeight(bold);
+      font-size: set-font-size(h2);
+      font-weight: set-font-weight(bold);
 
       //      MEDIA QUERIES
 
@@ -47,7 +47,7 @@
       padding: 0 10px;
       margin-bottom: 15px;
 
-      font-size: setFontSize(sub1);
+      font-size: set-font-size(sub1);
       line-height: 28px;
 
       overflow: hidden;
@@ -68,7 +68,7 @@
       .details__labels {
         margin-right: 10px;
 
-        font-weight: setFontWeight(medium);
+        font-weight: set-font-weight(medium);
       }
     }
   }
@@ -85,10 +85,10 @@
   padding: 0 10px;
   margin-bottom: 15px;
 
-  font-size: setFontSize(sub1);
+  font-size: set-font-size(sub1);
   line-height: 22px;
 
-  color: setColor(neutral-dark);
+  color: set-color(neutral-dark);
   
   overflow-x: hidden;
 
@@ -112,7 +112,7 @@
   margin-left: 10px;
   margin-bottom: 20px;
 
-  color: setColor(neutral-light);
+  color: set-color(neutral-light);
   
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -126,11 +126,11 @@
   //      STATES
 
   &--unavailable {
-    background-color: setColor(warning);
+    background-color: set-color(warning);
   }
 
   &--available {
-    background-color: setColor(primary);
+    background-color: set-color(primary);
   }
 
   &--added {

@@ -21,18 +21,18 @@
 .primary-button {
   border: 0;
 
-  font-size: setFontSize(h3);
+  font-size: set-font-size(h3);
 
-  color: setColor(neutral-light);
-  background-color: setColor(primary);
+  color: set-color(neutral-light);
+  background-color: set-color(primary);
 }
 
 .text-button {
   border: 0;
   
-  font-size: setFontSize(h3);
-  font-weight: setFontWeight(bold);
+  font-size: set-font-size(h3);
+  font-weight: set-font-weight(bold);
 
-  color: setColor(primary);
+  color: set-color(primary);
   background-color: transparent;
 }
