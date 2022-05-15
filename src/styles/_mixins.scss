@@ -1,11 +1,11 @@
-@mixin flexCenter($direction: row) {
+@mixin flex-center($direction: row) {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: $direction;
 }
 
-@mixin backgroundImgStyles($size: cover) {
+@mixin bg-img-styles($size: cover) {
   background-position: center;
   background-size: $size;
   background-repeat: no-repeat;

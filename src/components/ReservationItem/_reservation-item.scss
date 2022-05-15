@@ -16,7 +16,7 @@
   }
 
   & > li {
-    @include flexCenter(column);
+    @include flex-center(column);
   }
 
   &__vehicle {
@@ -31,7 +31,7 @@
       width: 100%;
       height: 100px;
 
-      @include backgroundImgStyles(contain);
+      @include bg-img-styles(contain);
     }
 
     .vehicle__details span {

@@ -2,7 +2,7 @@
 
 .divider__with-text {
   position: relative;
-  @include flexCenter;
+  @include flex-center;
   height: 20px;
 
   overflow: hidden;
@@ -17,7 +17,7 @@
 
   p {
     position: absolute;
-    @include flexCenter;
+    @include flex-center;
     padding: 5px 40px;
 
     font-size: set-font-size(sub2);

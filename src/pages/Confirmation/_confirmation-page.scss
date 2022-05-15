@@ -2,12 +2,12 @@
 
 .confirmation {
   position: relative;
-  @include flexCenter;
+  @include flex-center;
   width: clamp(100vw, 100vw, 1680px);
   height: 100vh;
 
   background-image: url('../../assets/images/landing-page.jpg');
-  @include backgroundImgStyles;
+  @include bg-img-styles;
 
   overflow: hidden;
 
@@ -22,7 +22,7 @@
   &__dialog {
     position: relative;
     z-index: 1;
-    @include flexCenter(column);
+    @include flex-center(column);
     width: 460px;
     padding: 40px;
     margin-top: -150px;

@@ -41,7 +41,7 @@
     }
 
     & > li {
-      @include flexCenter;
+      @include flex-center;
       padding: 10px 20px;
 
       font-size: set-font-size(normal);
@@ -74,7 +74,7 @@
     }
     
     & > div {
-      @include flexCenter;
+      @include flex-center;
       grid-column-start: -1;
       grid-column-end: -2;      
     }
