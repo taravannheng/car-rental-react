@@ -2,6 +2,14 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import * as ROUTES from '../../constants/routes'
 
+const checkEmpty = (val) => {
+  return val === "" ? true : false
+}
+
+const checkEmailValidity = (val) => {
+  return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(val);
+}
+
 function CheckoutForm() {
 
   const navigate = useNavigate()
@@ -24,14 +32,6 @@ function CheckoutForm() {
       isValid: false
     }
   ])
-
-  const checkEmpty = (val) => {
-    return val === "" ? true : false
-  }
-
-  const checkEmailValidity = (val) => {
-    return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(val);
-  }
 
   const checkFormValidity = () => {
     let isValid = true
