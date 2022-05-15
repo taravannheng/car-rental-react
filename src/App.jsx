@@ -8,15 +8,17 @@ import ConfirmationPage from './pages/Confirmation/ConfirmationPage';
 import NotFoundPage from './pages/NotFound/NotFoundPage';
 import Home from "./pages/Home/Home";
 import * as ROUTES from './constants/routes'
-import { FirebaseProvider } from './components/Firebase/firebaseContext';
 import PrivateRoute from './components/Routes/PrivateRoute';
 import { UserAuthProvider } from './contexts/userAuthContext'
 import { CartProvider } from './contexts/cartContext'
+import firebaseConfig from './components/Firebase/firebase';
+import { initializeApp } from "firebase/app"
+
+initializeApp(firebaseConfig)
 
 function App() {
   return (
    <>
-    <FirebaseProvider>
     <UserAuthProvider>
     <CartProvider>
       <Router>
@@ -44,7 +46,6 @@ function App() {
       </Router>
     </CartProvider>
     </UserAuthProvider>
-    </FirebaseProvider>
    </>
   );
 }

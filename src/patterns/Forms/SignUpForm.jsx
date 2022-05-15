@@ -1,6 +1,5 @@
-import { useState, useContext } from "react"
+import { useState } from "react"
 import { useNavigate, Link } from "react-router-dom"
-import FirebaseContext from "../../components/Firebase/firebaseContext"
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"
 import DividerWithText from "../../components/Divider/DividerWithText"
 import * as ROUTES from '../../constants/routes'
@@ -11,8 +10,7 @@ function SignUpForm() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
-  const firebaseApp = useContext(FirebaseContext)
-  const auth = getAuth(firebaseApp)
+  const auth = getAuth()
 
   const navigate = useNavigate()
 

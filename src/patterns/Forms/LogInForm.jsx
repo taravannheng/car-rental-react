@@ -2,16 +2,13 @@ import { useState, useContext } from 'react'
 import { useNavigate, Link } from "react-router-dom"
 import DividerWithText from '../../components/Divider/DividerWithText';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import FirebaseContext from "../../components/Firebase/firebaseContext"
 import * as ROUTES from '../../constants/routes'
 import UserAuthContext from '../../contexts/userAuthContext';
 
 function LogInForm() {
   const navigate = useNavigate()
 
-  const firebaseApp = useContext(FirebaseContext)
-  const auth = getAuth(firebaseApp)
-  // const auth = getAuth()
+  const auth = getAuth()
 
   const { setLoggedIn } = useContext(UserAuthContext)
 
