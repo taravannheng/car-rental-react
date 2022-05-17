@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import CartContext from "../../contexts/cartContext"
+import Button from '../Buttons/Button'
 
 function ProductCard({ productDetails }) {
 
@@ -9,17 +10,17 @@ function ProductCard({ productDetails }) {
     if (productDetails.availability) {
 
       //add or remove product from context
-      if (e.target.classList.contains("button__add-to-cart--added")) {
+      if (e.target.classList.contains("button--selected")) {
         setCart(cart.filter((car, index) => car.id !== productDetails.id))
       } else {
         setCart([...cart, productDetails])
       }
 
       //update the classname
-      e.target.classList.toggle("button__add-to-cart--added")
+      e.target.classList.toggle("button--selected")
 
       //change text
-      if (e.target.classList.contains("button__add-to-cart--added")) {
+      if (e.target.classList.contains("button--selected")) {
         e.target.innerText = "Added to Cart"
       } else {
         e.target.innerText = "Add to Cart"
@@ -54,7 +55,7 @@ function ProductCard({ productDetails }) {
       </div>
 
       <div className="card__add-to-cart">
-        <button type="button" onClick={handleAddToCart} id={productDetails.id} className={` button__add-to-cart ${productDetails.availability ? "button__add-to-cart--available" : "button__add-to-cart--unavailable"}`}>{productDetails.availability ? 'Add to Cart' : 'Not Available'}</button>
+        <Button id={productDetails.id} type='button' level='primary' handleClick={handleAddToCart} isWarning={!productDetails.availability && true}>{productDetails.availability ? 'Add to Cart' : 'Not Available'}</Button>
       </div>
     </div>
   )

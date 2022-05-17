@@ -2,6 +2,7 @@ import { useState } from "react"
 import { getAuth, sendPasswordResetEmail } from 'firebase/auth'
 import { Link, useNavigate } from 'react-router-dom'
 import DividerWithText from "../../components/Divider/DividerWithText"
+import Button from "../../components/Buttons/Button"
 
 
 function ForgotPasswordForm() {
@@ -34,9 +35,9 @@ function ForgotPasswordForm() {
         <label className='form__label'>Email</label>
         <input type="email" placeholder="Enter your email..." onChange={handleEmailChange} value={email} className="form__input input__text" required/>
       </div>
-      <button className='button primary-button' type="submit">Reset Password</button>
+      <Button type='submit' level='primary' isBlockLevel={true} isSelected={true}>Reset Password</Button>
       <DividerWithText text="OR" />
-      <Link to="/signin" className='button text-button'>Sign In</Link>
+      <Link to="/signin" className='button button--text'>Sign In</Link>
     </form>
   )
 }

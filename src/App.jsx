@@ -24,9 +24,9 @@ function App() {
       <Router>
         <Routes>
           <Route path={ROUTES.LANDING} element={<SignInPage />} />
-          <Route path={ROUTES.HOME} element={<PrivateRoute />}>
+          {/* <Route path={ROUTES.HOME} element={<PrivateRoute />}> */}
             <Route path={ROUTES.HOME} element={<Home />} />
-          </Route>
+          {/* </Route> */}
           <Route path={ROUTES.CART} element={<PrivateRoute />}>
             <Route path={ROUTES.CART} element={<CartPage />} />
           </Route>

@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useNavigate, Link } from "react-router-dom"
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"
 import DividerWithText from "../../components/Divider/DividerWithText"
+import Button from "../../components/Buttons/Button"
 import * as ROUTES from '../../constants/routes'
 
 
@@ -44,9 +45,9 @@ function SignUpForm() {
         <label className='form__label'>Password</label>
         <input type="password" onChange={handlePasswordChange} value={password} className="form__input input__text" required/>
       </div>
-      <button className='button primary-button' type="submit">Sign Up</button>
+      <Button type='submit' level='primary' isBlockLevel={true} isSelected={true}>Sign Up</Button>
       <DividerWithText text="OR" />
-      <Link to={ROUTES.SIGNIN} className='button text-button'>Sign In</Link>
+      <Link to={ROUTES.SIGNIN} className='button button--text'>Sign In</Link>
     </form>
   )
 }

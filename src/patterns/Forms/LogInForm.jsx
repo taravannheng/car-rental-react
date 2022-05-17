@@ -4,6 +4,7 @@ import DividerWithText from '../../components/Divider/DividerWithText';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import * as ROUTES from '../../constants/routes'
 import UserAuthContext from '../../contexts/userAuthContext';
+import Button from '../../components/Buttons/Button';
 
 function LogInForm() {
   const navigate = useNavigate()
@@ -50,7 +51,7 @@ function LogInForm() {
         <label className='form__label'>Password</label>
         <input type="password" onChange={handlePasswordChange} value={password} className="form__input input__text" required/>
       </div>
-      <button className='button primary-button' type="submit">Sign In</button>
+      <Button type='submit' level='primary' isBlockLevel={true} isSelected={true}>Sign In</Button>
       <Link to="/forgot-password" className='button button--text'>Reset Password</Link>
       <DividerWithText text="OR" />
       <Link to={ROUTES.SIGNUP} className='button button--text'>Sign Up</Link>

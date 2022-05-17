@@ -44,4 +44,9 @@
     background-color: set-color(primary);
     color: set-color(neutral-light);
   }
+
+  &--warning, &--warning:hover {
+    background-color: set-color(warning);
+    color: set-color(neutral-light);
+  }
 }
