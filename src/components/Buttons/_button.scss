@@ -3,6 +3,7 @@
 .button {
   @include flex-center;
   height: 40px;
+  padding: 0 20px;
   border: 0;
 
   font-family: inherit;
