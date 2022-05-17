@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { getAuth, sendPasswordResetEmail } from 'firebase/auth'
 import { Link, useNavigate } from 'react-router-dom'
+import * as ROUTES from '../../constants/routes'
 import DividerWithText from "../../components/Divider/DividerWithText"
 import Button from "../../components/Buttons/Button"
 
@@ -37,7 +38,7 @@ function ForgotPasswordForm() {
       </div>
       <Button type='submit' level='primary' isBlockLevel={true} isSelected={true}>Reset Password</Button>
       <DividerWithText text="OR" />
-      <Link to="/signin" className='button button--text'>Sign In</Link>
+      <Button level='text' isBlockLevel={true}><Link className='link' to={ROUTES.SIGNIN}>Sign In</Link></Button>
     </form>
   )
 }

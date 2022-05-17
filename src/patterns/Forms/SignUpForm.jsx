@@ -47,7 +47,7 @@ function SignUpForm() {
       </div>
       <Button type='submit' level='primary' isBlockLevel={true} isSelected={true}>Sign Up</Button>
       <DividerWithText text="OR" />
-      <Link to={ROUTES.SIGNIN} className='button button--text'>Sign In</Link>
+      <Button level='text' isBlockLevel={true}><Link className='link' to={ROUTES.SIGNIN}>Sign In</Link></Button>
     </form>
   )
 }

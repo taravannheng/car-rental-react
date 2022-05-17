@@ -52,9 +52,9 @@ function LogInForm() {
         <input type="password" onChange={handlePasswordChange} value={password} className="form__input input__text" required/>
       </div>
       <Button type='submit' level='primary' isBlockLevel={true} isSelected={true}>Sign In</Button>
-      <Link to="/forgot-password" className='button button--text'>Reset Password</Link>
+      <Button level='text' isBlockLevel={true}><Link className='link' to="/forgot-password">Reset Password</Link></Button>
       <DividerWithText text="OR" />
-      <Link to={ROUTES.SIGNUP} className='button button--text'>Sign Up</Link>
+      <Button level='text' isBlockLevel={true}><Link className='link' to={ROUTES.SIGNUP}>Sign Up</Link></Button>
     </form>
   )
 }
