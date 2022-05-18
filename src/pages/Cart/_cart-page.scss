@@ -78,26 +78,5 @@
       grid-column-start: -1;
       grid-column-end: -2;      
     }
-
-    &-button {
-      padding: 10px 30px;
-
-      text-decoration: none;
-      
-      background-color: set-color(primary);
-      color: set-color(neutral-light);
-
-      //      MEDIA QUERIES
-
-      @media only screen and (max-width: 800px) {
-        padding: 10px 20px;
-      }
-
-      //      STATES
-
-      &--disabled {
-        opacity: 0.5;
-      }
-    }
   }
 }

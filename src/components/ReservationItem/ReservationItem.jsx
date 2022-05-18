@@ -19,7 +19,7 @@ function ReservationItem({ productDetails }) {
       </li>
       <li className="reservation-item__price-per-day">${productDetails.pricePerDay}</li>
       <li className="reservation-item__delete-button">
-        <button type="button" onClick={handleDelete}>
+        <button type="button" className='button--primary button--warning' onClick={handleDelete}>
           <span className="button__text">Delete</span>
         </button>
       </li>

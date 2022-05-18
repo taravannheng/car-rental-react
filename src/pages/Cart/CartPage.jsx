@@ -1,9 +1,10 @@
 import { Link, Navigate } from 'react-router-dom'
 import * as ROUTES from '../../constants/routes'
-import Header from "../../patterns/Header/Header"
 import CartContext from '../../contexts/cartContext'
 import { useContext } from 'react'
+import Header from "../../patterns/Header/Header"
 import ReservationItem from '../../components/ReservationItem/ReservationItem'
+import Button from '../../components/Buttons/Button'
 
 function CartPage() {
   const { cart } = useContext(CartContext)
@@ -28,7 +29,7 @@ function CartPage() {
         { cart.map(car => <ReservationItem productDetails={car} key={car.id}/>) }
         </div>
         <div className="cart__checkout">
-          <div><Link to={ROUTES.CHECKOUT} className={'cart__checkout-button'}>Checkout</Link></div>
+          <div><Button type='button' className='button-primary button--selected'><Link to={ROUTES.CHECKOUT} className={'cart__checkout-button link'}>Checkout</Link></Button></div>
         </div>
       </main>
     </>

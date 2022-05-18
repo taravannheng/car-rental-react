@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import * as ROUTES from '../../constants/routes'
+import Button from '../../components/Buttons/Button'
 
 function ConfirmationPage() {
   return (
@@ -8,7 +9,7 @@ function ConfirmationPage() {
       <div className="confirmation__dialog">
         <h1 className="confirmation__dialog-title">Thank You!</h1>
         <p className="confirmation__dialog-description">We will contact you through email for further processes.</p>
-        <Link to={ROUTES.HOME} className="confirmation__dialog-back-button">Back to Home</Link>
+        <Button type='button' className='button--primary button--selected'><Link to={ROUTES.HOME} className='link'>Back to Home</Link></Button>
       </div>
     </main>
   )

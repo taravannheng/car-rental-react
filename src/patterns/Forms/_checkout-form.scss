@@ -17,26 +17,6 @@
     font-size: set-font-size(h2);
   }
 
-  &__submit-button {
-    width: 100%;
-    padding: 15px 30px;
-    border: 0;
-
-    background-color: set-color(primary);
-    color: set-color(neutral-light);
-
-    font-size: set-font-size(h3);
-
-    cursor: pointer;
-
-    //      STATES
-
-    &--disabled {
-      opacity: 0.5;
-      cursor: default;
-    }
-  }
-
   .input-control {
     position: relative;
     display: flex;

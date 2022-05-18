@@ -28,6 +28,10 @@
   &--text {
     color: set-color(primary);
     background-color: transparent;
+
+    & > .link {
+      color: set-color(primary);
+    }
   }
 
   &--block {
@@ -43,6 +47,10 @@
   &--selected {
     background-color: set-color(primary);
     color: set-color(neutral-light);
+
+    & > .link {
+      color: set-color(neutral-light);
+    }
   }
 
   &--warning, &--warning:hover {

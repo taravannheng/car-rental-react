@@ -37,12 +37,10 @@
 
   &__cart {
     @include flex-center;
-    padding: 10px 20px;
 
-    background-color: set-color(primary);
     color: set-color(neutral-light);
 
-    text-decoration: none;
+    //      CHILDREN
 
     & > :first-child {
       margin-right: 10px;

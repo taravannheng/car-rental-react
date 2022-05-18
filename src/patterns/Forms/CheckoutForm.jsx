@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import * as ROUTES from '../../constants/routes'
+import Button from '../../components/Buttons/Button'
 
 const checkEmpty = (val) => {
   return val === "" ? true : false
@@ -173,7 +174,7 @@ function CheckoutForm() {
         <input type="email" name="email" id="email" className="input-control__input" required onChange={handleEmail}/>
         <small className="input-control__message"></small>
       </div>
-      <button type="submit" className={`checkout-form__submit-button ${!isValidForm && 'checkout-form__submit-button--disabled'}`} disabled={!isValidForm && 'disabled'}>Book</button>
+      <Button type='submit' className={`button--primary button--selected button--block ${!isValidForm && 'button--disabled'}`} disabled={!isValidForm && 'disabled'}>Book</Button>
     </form>
   )
 }
