@@ -45,9 +45,9 @@ function SignUpForm() {
         <label className='form__label'>Password</label>
         <input type="password" onChange={handlePasswordChange} value={password} className="form__input input__text" required/>
       </div>
-      <Button type='submit' level='primary' isBlockLevel={true} isSelected={true}>Sign Up</Button>
+      <Button type='submit' className='button--primary button--block button--selected'>Sign Up</Button>
       <DividerWithText text="OR" />
-      <Button level='text' isBlockLevel={true}><Link className='link' to={ROUTES.SIGNIN}>Sign In</Link></Button>
+      <Button className='button--text button--block'><Link className='link' to={ROUTES.SIGNIN}>Sign In</Link></Button>
     </form>
   )
 }

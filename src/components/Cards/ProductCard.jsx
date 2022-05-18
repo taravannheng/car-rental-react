@@ -55,7 +55,7 @@ function ProductCard({ productDetails }) {
       </div>
 
       <div className="card__add-to-cart">
-        <Button id={productDetails.id} type='button' level='primary' handleClick={handleAddToCart} isWarning={!productDetails.availability && true}>{productDetails.availability ? 'Add to Cart' : 'Not Available'}</Button>
+        <Button id={productDetails.id} type='button' className={`button--primary ${!productDetails.availability && 'button--warning'}`} handleClick={handleAddToCart}>{productDetails.availability ? 'Add to Cart' : 'Not Available'}</Button>
       </div>
     </div>
   )

@@ -1,10 +1,6 @@
-function Button({ children, id, type, level, isDisabled = false, handleClick, isBlockLevel = false, isSelected = false, isWarning = false }) {
-  const getClassName = () => {
-    return `button button--${level} ${isDisabled && 'button--disabled'} ${isBlockLevel && 'button--block'} ${isSelected && 'button--selected'} ${isWarning && 'button--warning'}`
-  }
-
+function Button({ children, id, className, type, handleClick}) {
   return (
-    <button id={id} className={getClassName()} type={type} onClick={handleClick}>{children}</button>
+    <button id={id} className={`button ${className}`} type={type} onClick={handleClick}>{children}</button>
   )
 }
 

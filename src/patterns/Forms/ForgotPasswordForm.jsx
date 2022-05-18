@@ -36,9 +36,9 @@ function ForgotPasswordForm() {
         <label className='form__label'>Email</label>
         <input type="email" placeholder="Enter your email..." onChange={handleEmailChange} value={email} className="form__input input__text" required/>
       </div>
-      <Button type='submit' level='primary' isBlockLevel={true} isSelected={true}>Reset Password</Button>
+      <Button type='submit' className='button--primary button--block button--selected'>Reset Password</Button>
       <DividerWithText text="OR" />
-      <Button level='text' isBlockLevel={true}><Link className='link' to={ROUTES.SIGNIN}>Sign In</Link></Button>
+      <Button className='button--text button--block'><Link className='link' to={ROUTES.SIGNIN}>Sign In</Link></Button>
     </form>
   )
 }
