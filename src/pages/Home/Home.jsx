@@ -30,7 +30,7 @@ function Home() {
       <Header />
       <main className='home'>
         <div className="product-container">
-          {cars != null ? cars.map(car => <ProductCard productDetails={car} key={car.id}/>) : <p>There is no product at the moment</p>}
+          {cars != null ? cars.map(car => <ProductCard productDetails={car} key={car.id}/>) : <p>Loading...</p>}
         </div>
       </main>
     </>
