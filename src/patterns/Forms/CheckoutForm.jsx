@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import * as ROUTES from '../../constants/routes'
+import CartContext from '../../contexts/cartContext'
 import Button from '../../components/Buttons/Button'
 
 const checkEmpty = (val) => {
@@ -14,6 +15,7 @@ const checkEmailValidity = (val) => {
 function CheckoutForm() {
 
   const navigate = useNavigate()
+  const { setCart } = useContext(CartContext)
 
   const [isValidForm, setIsValidForm] = useState(false)
   const [userInputs, setUserInputs] = useState([
@@ -152,6 +154,8 @@ function CheckoutForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    setCart([])
 
     navigate(ROUTES.CONFIRMATION)
   }
