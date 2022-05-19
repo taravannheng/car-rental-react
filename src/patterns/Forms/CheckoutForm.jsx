@@ -47,7 +47,7 @@ function CheckoutForm() {
       return null
     })
 
-    setIsValidForm(isValid)
+    setIsValidForm(() => (isValid))
   }
 
   const handleFirstName = (e) => {
@@ -68,7 +68,7 @@ function CheckoutForm() {
     }
 
     // update state
-    setUserInputs(userInputs.map(userInput => {
+    setUserInputs(() => (userInputs.map(userInput => {
 
       if (userInput.name === e.target.name) {
         return {...userInput,
@@ -78,7 +78,7 @@ function CheckoutForm() {
       }
 
       return userInput
-    }))
+    })))
 
     //check form validity
     checkFormValidity()
@@ -102,7 +102,7 @@ function CheckoutForm() {
     }
 
     // update state
-    setUserInputs(userInputs.map(userInput => {
+    setUserInputs(() => (userInputs.map(userInput => {
 
       if (userInput.name === e.target.name) {
         return {...userInput,
@@ -112,7 +112,7 @@ function CheckoutForm() {
       }
 
       return userInput
-    }))
+    })))
 
     //check form validity
     checkFormValidity()
@@ -136,7 +136,7 @@ function CheckoutForm() {
     }
 
     // update state
-    setUserInputs(userInputs.map(userInput => {
+    setUserInputs(() => (userInputs.map(userInput => {
 
       if (userInput.name === e.target.name) {
         return {...userInput,
@@ -146,7 +146,7 @@ function CheckoutForm() {
       }
 
       return userInput
-    }))
+    })))
 
     //check form validity
     checkFormValidity()
@@ -155,7 +155,7 @@ function CheckoutForm() {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    setCart([])
+    setCart(() => ([]))
 
     navigate(ROUTES.CONFIRMATION)
   }

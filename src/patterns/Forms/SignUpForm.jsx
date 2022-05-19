@@ -16,11 +16,11 @@ function SignUpForm() {
   const navigate = useNavigate()
 
   const handleEmailChange = (e) => {
-    setEmail(e.target.value)
+    setEmail(() => (e.target.value))
   }
 
   const handlePasswordChange = (e) => {
-    setPassword(e.target.value)
+    setPassword(() => (e.target.value))
   } 
 
   const handleSignUp = async (e) => {

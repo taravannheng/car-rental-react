@@ -24,7 +24,7 @@ function LogInForm() {
 
       if (userCredential.user) {
 
-        setLoggedIn(true)
+        setLoggedIn(() => (true))
 
         navigate(ROUTES.HOME)
       }
@@ -34,11 +34,11 @@ function LogInForm() {
   }
 
   const handleEmailChange = (e) => {
-    setEmail(e.target.value)
+    setEmail(() => (e.target.value))
   }
 
   const handlePasswordChange = (e) => {
-    setPassword(e.target.value)
+    setPassword(() => (e.target.value))
   }
 
   return (

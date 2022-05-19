@@ -9,7 +9,7 @@ function Home() {
   // document: cars -> cars
   // field: imgUrls -> carDetails 
 
-  const [cars, setCars] = useState(null)
+  const [cars, setCars] = useState([])
 
   const db = getFirestore()
 
@@ -19,7 +19,7 @@ function Home() {
     getDoc(docRef).then((doc) => {
       const { imgUrls } = doc.data()
 
-      setCars(imgUrls)
+      setCars(() => (imgUrls))
     })
 
     // eslint-disable-next-line

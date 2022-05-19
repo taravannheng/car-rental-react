@@ -15,7 +15,7 @@ function ForgotPasswordForm() {
   const navigate = useNavigate()
 
   const handleEmailChange = (e) => {
-    setEmail(e.target.value)
+    setEmail(() => (e.target.value))
   }
 
   const handleSubmit = (e) => {

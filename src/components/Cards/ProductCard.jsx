@@ -4,16 +4,16 @@ import Button from '../Buttons/Button'
 
 function ProductCard({ productDetails }) {
 
-  const { cart, setCart } = useContext(CartContext)
+  const { setCart } = useContext(CartContext)
 
   const handleAddToCart = (e) => {
     if (productDetails.availability) {
 
       //add or remove product from context
       if (e.target.classList.contains("button--selected")) {
-        setCart(cart.filter((car, index) => car.id !== productDetails.id))
+        setCart(cart => (cart.filter((car, index) => car.id !== productDetails.id)))
       } else {
-        setCart([...cart, productDetails])
+        setCart(cart => ([...cart, productDetails]))
       }
 
       //update the classname

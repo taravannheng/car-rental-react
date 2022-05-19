@@ -3,10 +3,10 @@ import CartContext from '../../contexts/cartContext';
 
 function ReservationItem({ productDetails }) {
 
-  const { cart, setCart } = useContext(CartContext)
+  const { setCart } = useContext(CartContext)
 
   const handleDelete = (e) => {
-    setCart(cart.filter((car, index) => car.id !== e.target.closest('.reservation-item').id))
+    setCart(cart => (cart.filter((car, index) => car.id !== e.target.closest('.reservation-item').id)))
   }
 
   return (
