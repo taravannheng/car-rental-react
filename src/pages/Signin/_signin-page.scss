@@ -55,8 +55,20 @@
 @media only screen and (max-width: set-breakpoint(small)) {
   .login {
 
+    &__logo {
+      width: 200px;
+      margin-bottom: 24px;
+    }
+
     &__container {
-      width: clamp(420px, 420px, 420px);
+      // width: clamp(420px, 420px, 420px);
+      width: clamp(360px, 360px, 360px);
+    }
+
+    &__form {
+      & > *:not(:last-child) {
+        margin-bottom: 20px;
+      }
     }
   }
 }

@@ -45,4 +45,12 @@
       text-align: center;
     }
   }
+
+  @media only screen and (max-width: set-breakpoint(small)) {
+    & {
+      &__dialog {
+        width: 360px;
+      }   
+    }
+  }
 }

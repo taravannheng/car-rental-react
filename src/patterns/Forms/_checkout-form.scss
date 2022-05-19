@@ -5,6 +5,8 @@
 
   background-color: set-color(neutral-light);
 
+  overflow: hidden;
+
   & > *:not(:last-child) {
     margin-bottom: 40px;
   }
@@ -45,6 +47,25 @@
         z-index: 2;
 
         transform: translateY(-30px);
+      }
+    }
+  }
+
+  @media only screen and (max-width: set-breakpoint(small)) {
+    & {
+      width: 360px;
+      padding: 24px;
+
+      & > *:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      .input-control {
+        width: 100%;
+
+        &__input {
+          width: 200px;
+        }
       }
     }
   }
