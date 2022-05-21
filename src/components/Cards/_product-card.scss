@@ -28,6 +28,13 @@
   }
 
   &__content {
+    @media only screen and (max-width: 500px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     .content__title {
       margin: 0 0 15px 10px;
 
@@ -37,7 +44,7 @@
       //      MEDIA QUERIES
 
       @media only screen and (max-width: 500px) {
-        margin-bottom: 20px;
+        margin: 0 16px 0;
 
         text-align: center;
       }
