@@ -7,6 +7,9 @@ function ProductCard({ productDetails }) {
   const { setCart } = useContext(CartContext)
 
   const handleAddToCart = (e) => {
+
+    console.log('hello');
+
     if (productDetails.availability) {
 
       //add or remove product from context

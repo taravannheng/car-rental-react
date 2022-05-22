@@ -1,6 +1,7 @@
 @use '../../styles/index' as *;
 
 .button {
+  position: relative;
   @include flex-center;
   width: 140px;
   height: 40px;
@@ -12,6 +13,7 @@
   font-weight: set-font-weight(regular);
 
   cursor: pointer;
+  overflow: hidden;
 
   //      LEVELS
 
@@ -56,5 +58,26 @@
   &--warning, &--warning:hover {
     background-color: set-color(warning);
     color: set-color(neutral-light);
+  }
+}
+
+/*    RIPPLE EFFECT     */
+
+span.ripple {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%) scale(0);
+
+  background-color: set-color(neutral-light);
+  border-radius: 50%;
+  animation: ripple 0.5s ease-in;
+  // opacity: 0.1;
+}
+
+@keyframes ripple {
+  to {
+      transform: translate(-50%, -50%) scale(3);
+      opacity: 0;
   }
 }
