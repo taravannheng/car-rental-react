@@ -17,6 +17,7 @@ function CartPage() {
     <>
       <Header />
       <main className="cart">
+       <Button className='button--text button--block cart__back-to-home-button'><Link className='link' to={ROUTES.HOME}>Back to Home</Link></Button>
         <h1 className="cart__title">
               <span className="title__text">RESERVATIONS</span>
         </h1>
