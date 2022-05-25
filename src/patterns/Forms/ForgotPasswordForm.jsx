@@ -23,8 +23,7 @@ function ForgotPasswordForm() {
 
     try {
       sendPasswordResetEmail(auth, email)
-      alert("Reset link has been sent to your email!")
-      navigate('/signin')
+      navigate(ROUTES.FORGOTPASSWORDCONFIRMATION)
     } catch (error) {
       console.log(error);
     }

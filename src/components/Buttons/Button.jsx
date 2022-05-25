@@ -23,8 +23,6 @@ function Button({ children, id, className, type, handleClick, isDisabled = false
 
     e.target.appendChild(span);
 
-    console.log('hi');
-
     //remove span after effect
     setTimeout(() => span.remove(), 500);
   }
