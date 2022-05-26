@@ -1,11 +1,23 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
+import { getAuth, signOut } from 'firebase/auth'
+
 import CartContext from '../../contexts/cartContext'
 import * as ROUTES from '../../constants/routes'
 import Button from '../../components/Buttons/Button'
 
 function Header() {
   const { cart } = useContext(CartContext)
+  const navigate = useNavigate()
+  const auth = getAuth();
+
+  const signOutHandler = () => {
+    signOut(auth).then(() => {
+      navigate(ROUTES.SIGNIN)
+    }).catch((error) => {
+      alert('An error has occured!')
+    });
+  }
 
   return (
     <header className="header">
@@ -15,14 +27,17 @@ function Header() {
             <span className="">Car Rental Center</span>
         </h1>
 
-        <Button type="button" className='button--primary button--selected'>
-          <Link to={cart.length !== 0 && ROUTES.CART} className='header__cart link'>
-            <span>Cart</span>
-            <div className="counter">
-              <span className="counter__text">{cart.length}</span>
-            </div>
-          </Link>
-        </Button>
+        <div className='header__button-container'>
+          <Button type="button" className='button--primary button--selected'>
+            <Link to={cart.length !== 0 && ROUTES.CART} className='header__cart link'>
+              <span>Cart</span>
+              <div className="counter">
+                <span className="counter__text">{cart.length}</span>
+              </div>
+            </Link>
+          </Button>
+          <Button type="button" className='button--text' handleClick={signOutHandler}>Sign Out</Button>
+        </div>
     </header>
   )
 }
