@@ -63,5 +63,33 @@
 
   &__button-container {
     display: flex;
+
+    
+
+    & > .icon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 16px;
+      margin-left: 16px;
+
+      // background-color: set-color(neutral-light);
+
+      &:hover {
+        // background-color: ;
+        cursor: pointer;
+        // opacity: 0.1;
+
+        & > * {
+          color: set-color(primary);
+          opacity: 1;
+        }
+      }
+    }
+
+    & .icon__sign-out {
+      color: set-color(neutral-light);
+      font-size: 24px;
+    }
   }
 }

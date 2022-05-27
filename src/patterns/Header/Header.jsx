@@ -1,6 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import { getAuth, signOut } from 'firebase/auth'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons'
 
 import CartContext from '../../contexts/cartContext'
 import * as ROUTES from '../../constants/routes'
@@ -35,8 +37,10 @@ function Header() {
                 <span className="counter__text">{cart.length}</span>
               </div>
             </Link>
-          </Button>
-          <Button type="button" className='button--text' handleClick={signOutHandler}>Sign Out</Button>
+          </Button>          
+          <div className='icon-container' onClick={signOutHandler}>
+            <FontAwesomeIcon icon={faArrowRightFromBracket} className="icon icon__sign-out"/>
+          </div>
         </div>
     </header>
   )
