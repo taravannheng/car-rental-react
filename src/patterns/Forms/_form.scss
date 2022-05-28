@@ -5,9 +5,12 @@
     display: flex;
     flex-direction: column;
     width: clamp(100px, 100%, 460px);
+    margin-bottom: 16px;
   }
 
   &__label {
+    margin-bottom: 4px;
+
     color: set-color(neutral-dark);
     font-family: inherit;
     font-size: set-font-size(regular);
@@ -31,5 +34,15 @@
     &:focus {
       outline-color: set-color(primary);
     }
+  }
+
+  & .button--primary {
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+
+  & .divider {
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
 }
