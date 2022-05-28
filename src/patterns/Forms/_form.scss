@@ -1,33 +1,35 @@
 @use '../../styles/index' as *;
 
-.form__control {
-  display: flex;
-  flex-direction: column;
-  width: clamp(100px, 100%, 460px);
-}
+.form {
+  &__control {
+    display: flex;
+    flex-direction: column;
+    width: clamp(100px, 100%, 460px);
+  }
 
-.form__label {
-  color: set-color(neutral-dark);
-  font-family: inherit;
-  font-size: set-font-size(regular);
-  font-weight: set-font-weight(regular);
+  &__label {
+    color: set-color(neutral-dark);
+    font-family: inherit;
+    font-size: set-font-size(regular);
+    font-weight: set-font-weight(regular);
 
-  opacity: 0.7;
-}
+    opacity: 0.7;
+  }
 
-.form__input {
-  width: clamp(100px, 100%, 460px);
-  height: 40px;
-  padding: 8px;
-  border: 2px solid set-color(neutral-medium-grey);
-  border-radius: 8px;
-  margin-top: 4px;
-  
-  font-size: set-font-size(regular);
+  &__input {
+    width: clamp(100px, 100%, 460px);
+    height: 40px;
+    padding: 8px;
+    border: 2px solid set-color(neutral-medium-grey);
+    border-radius: 8px;
+    margin-top: 4px;
+    
+    font-size: set-font-size(regular);
 
-  //      PSEUDO CLASSES
+    //      PSEUDO CLASSES
 
-  &:focus {
-    outline-color: set-color(primary);
+    &:focus {
+      outline-color: set-color(primary);
+    }
   }
 }
