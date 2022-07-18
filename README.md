@@ -2,12 +2,12 @@
 
 A car rental website built using React.
 
-### Key Functionalities
+#### Key Functionalities
 
 1. Log In and Sign Up
 2. Booking
 
-### Technologies
+#### Technologies
 
 1. HTML
 2. CSS
