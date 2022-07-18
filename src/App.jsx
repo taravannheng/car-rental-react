@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import * as ROUTES from './constants/routes';
 import { initializeApp } from 'firebase/app';
@@ -6,14 +6,13 @@ import { initializeApp } from 'firebase/app';
 import { UserAuthProvider } from './contexts/userAuthContext';
 import { CartProvider } from './contexts/cartContext';
 import firebaseConfig from './components/Firebase/firebase';
+import PrivateRoute from './components/Routes/PrivateRoute';
+import Preloader from './components/Preloader/Preloader';
 
 //INIT FIREBASE
 initializeApp(firebaseConfig);
 
 //LAZY LOADING
-const PrivateRoute = React.lazy(() =>
-  import('./components/Routes/PrivateRoute')
-);
 const SignInPage = React.lazy(() => import('./pages/Signin/SignInPage'));
 const SignUpPage = React.lazy(() => import('./pages/Signup/SignUpPage'));
 const ForgotPasswordPage = React.lazy(() =>
@@ -31,104 +30,116 @@ const NotFoundPage = React.lazy(() => import('./pages/NotFound/NotFoundPage'));
 const Home = React.lazy(() => import('./pages/Home/Home'));
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+  }, []);
+
   return (
     <>
-      <UserAuthProvider>
-        <CartProvider>
-          <Router>
-            <Routes>
-              <Route
-                path={ROUTES.LANDING}
-                element={
-                  <Suspense fallback={<>...</>}>
-                    <SignInPage />
-                  </Suspense>
-                }
-              />
-              <Route path={ROUTES.HOME} element={<PrivateRoute />}>
+      {loading ? (
+        <Preloader />
+      ) : (
+        <UserAuthProvider>
+          <CartProvider>
+            <Router>
+              <Routes>
                 <Route
-                  path={ROUTES.HOME}
+                  path={ROUTES.LANDING}
                   element={
                     <Suspense fallback={<>...</>}>
-                      <Home />
+                      <SignInPage />
                     </Suspense>
                   }
                 />
-              </Route>
-              <Route path={ROUTES.CART} element={<PrivateRoute />}>
+                <Route path={ROUTES.HOME} element={<PrivateRoute />}>
+                  <Route
+                    path={ROUTES.HOME}
+                    element={
+                      <Suspense fallback={<>...</>}>
+                        <Home />
+                      </Suspense>
+                    }
+                  />
+                </Route>
+                <Route path={ROUTES.CART} element={<PrivateRoute />}>
+                  <Route
+                    path={ROUTES.CART}
+                    element={
+                      <Suspense fallback={<>...</>}>
+                        <CartPage />
+                      </Suspense>
+                    }
+                  />
+                </Route>
+                <Route path={ROUTES.CHECKOUT} element={<PrivateRoute />}>
+                  <Route
+                    path={ROUTES.CHECKOUT}
+                    element={
+                      <Suspense fallback={<>...</>}>
+                        <CheckoutPage />
+                      </Suspense>
+                    }
+                  />
+                </Route>
+                <Route path={ROUTES.CONFIRMATION} element={<PrivateRoute />}>
+                  <Route
+                    path={ROUTES.CONFIRMATION}
+                    element={
+                      <Suspense fallback={<>...</>}>
+                        <ConfirmationPage />
+                      </Suspense>
+                    }
+                  />
+                </Route>
                 <Route
-                  path={ROUTES.CART}
+                  path={ROUTES.SIGNIN}
                   element={
                     <Suspense fallback={<>...</>}>
-                      <CartPage />
+                      <SignInPage />
                     </Suspense>
                   }
                 />
-              </Route>
-              <Route path={ROUTES.CHECKOUT} element={<PrivateRoute />}>
                 <Route
-                  path={ROUTES.CHECKOUT}
+                  path={ROUTES.SIGNUP}
                   element={
                     <Suspense fallback={<>...</>}>
-                      <CheckoutPage />
+                      <SignUpPage />
                     </Suspense>
                   }
                 />
-              </Route>
-              <Route path={ROUTES.CONFIRMATION} element={<PrivateRoute />}>
                 <Route
-                  path={ROUTES.CONFIRMATION}
+                  path={ROUTES.FORGOTPASSWORD}
                   element={
                     <Suspense fallback={<>...</>}>
-                      <ConfirmationPage />
+                      <ForgotPasswordPage />
                     </Suspense>
                   }
                 />
-              </Route>
-              <Route
-                path={ROUTES.SIGNIN}
-                element={
-                  <Suspense fallback={<>...</>}>
-                    <SignInPage />
-                  </Suspense>
-                }
-              />
-              <Route
-                path={ROUTES.SIGNUP}
-                element={
-                  <Suspense fallback={<>...</>}>
-                    <SignUpPage />
-                  </Suspense>
-                }
-              />
-              <Route
-                path={ROUTES.FORGOTPASSWORD}
-                element={
-                  <Suspense fallback={<>...</>}>
-                    <ForgotPasswordPage />
-                  </Suspense>
-                }
-              />
-              <Route
-                path={ROUTES.FORGOTPASSWORDCONFIRMATION}
-                element={
-                  <Suspense fallback={<>...</>}>
-                    <ForgotPasswordConfirmationPage />
-                  </Suspense>
-                }
-              />
-              <Route
-                path={ROUTES.NOTFOUND}
-                element={
-                  <Suspense fallback={<>...</>}>
-                    <NotFoundPage />
-                  </Suspense>
-                }
-              />
-            </Routes>
-          </Router>
-        </CartProvider>
-      </UserAuthProvider>
+                <Route
+                  path={ROUTES.FORGOTPASSWORDCONFIRMATION}
+                  element={
+                    <Suspense fallback={<>...</>}>
+                      <ForgotPasswordConfirmationPage />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path={ROUTES.NOTFOUND}
+                  element={
+                    <Suspense fallback={<>...</>}>
+                      <NotFoundPage />
+                    </Suspense>
+                  }
+                />
+              </Routes>
+            </Router>
+          </CartProvider>
+        </UserAuthProvider>
+      )}
     </>
   );
 }

@@ -1,0 +1,41 @@
+@use '../../styles/index' as *;
+
+.preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: set-color(neutral-dark);
+}
+
+.preloader__background {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: 10px;
+  padding-left: 2px;
+  padding-right: 2px;
+  background-color: set-color(neutral-light);
+  border-radius: 10px;
+}
+
+.preloader__spinner {
+  width: 20px;
+  height: 6px;
+  background-color: set-color(primary);
+  border-radius: 6px;
+  animation: left-right 3s ease-in infinite;
+}
+
+@keyframes left-right {
+  50% {
+    transform: translateX(380%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
