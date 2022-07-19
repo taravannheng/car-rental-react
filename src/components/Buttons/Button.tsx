@@ -1,4 +1,14 @@
-const Button = ({
+import {FC, ReactNode} from 'react'
+
+interface Props {
+  children: ReactNode;
+  id?: string;
+  className?: string;
+  type: "button" | "submit" | "reset";
+  handleClick: () => void;
+}
+
+const Button: FC<Props> = ({
   children,
   id,
   className,
