@@ -1,4 +1,4 @@
-function Divider() {
+const Divider = () => {
   return (
     <hr className="divider"/>
   )

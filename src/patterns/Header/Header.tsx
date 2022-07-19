@@ -8,7 +8,7 @@ import CartContext from '../../contexts/cartContext'
 import * as ROUTES from '../../constants/routes'
 import Button from '../../components/Buttons/Button'
 
-function Header() {
+const Header = () => {
   const { cart } = useContext(CartContext)
   const navigate = useNavigate()
   const auth = getAuth();

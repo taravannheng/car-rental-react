@@ -3,7 +3,7 @@ import { getFirestore, doc, getDoc } from 'firebase/firestore'
 import Header from '../../patterns/Header/Header'
 import ProductCard from '../../components/Cards/ProductCard'
 
-function Home() {
+const Home = () => {
   // firestore rename: 
   // collection: images -> products
   // document: cars -> cars

@@ -1,6 +1,6 @@
 import SignUpForm from "../../patterns/Forms/SignUpForm"
 
-function SignUpPage() {
+const SignUpPage = () => {
 
   return (
     <div className='signup'>

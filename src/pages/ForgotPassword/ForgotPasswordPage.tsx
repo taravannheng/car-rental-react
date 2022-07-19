@@ -1,6 +1,6 @@
 import ForgotPasswordForm from "../../patterns/Forms/ForgotPasswordForm"
 
-function ForgotPasswordPage() {
+const ForgotPasswordPage = () => {
 
   return (
     <div className='forgotpassword'>

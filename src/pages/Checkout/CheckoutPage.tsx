@@ -1,7 +1,7 @@
 import Header from "../../patterns/Header/Header"
 import CheckoutForm from "../../patterns/Forms/CheckoutForm"
 
-function CheckoutPage() {
+const CheckoutPage = () => {
   return (
     <>
       <Header />

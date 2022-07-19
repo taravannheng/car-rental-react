@@ -6,7 +6,7 @@ import * as ROUTES from '../../constants/routes'
 import UserAuthContext from '../../contexts/userAuthContext';
 import Button from '../../components/Buttons/Button';
 
-function LogInForm() {
+const LogInForm = () => {
   const navigate = useNavigate()
 
   const auth = getAuth()

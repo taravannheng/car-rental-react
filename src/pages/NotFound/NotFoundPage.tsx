@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import * as ROUTES from '../../constants/routes'
 
-function NotFoundPage() {
+const NotFoundPage = () => {
   return (
     <main className="notfound">
       <div className="notfound__overlay"></div>

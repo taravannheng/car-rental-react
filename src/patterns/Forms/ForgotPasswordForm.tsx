@@ -6,7 +6,7 @@ import DividerWithText from "../../components/Divider/DividerWithText"
 import Button from "../../components/Buttons/Button"
 
 
-function ForgotPasswordForm() {
+const ForgotPasswordForm = () => {
 
   const [email, setEmail] = useState("")
 

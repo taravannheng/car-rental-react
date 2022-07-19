@@ -4,8 +4,8 @@ interface Props {
   children: ReactNode;
   id?: string;
   className?: string;
-  type: "button" | "submit" | "reset";
-  handleClick: (e: any) => void;
+  type?: "button" | "submit" | "reset";
+  handleClick?: (e: any) => void;
 }
 
 const Button: FC<Props> = ({

@@ -29,7 +29,7 @@ const ConfirmationPage = React.lazy(() =>
 const NotFoundPage = React.lazy(() => import('./pages/NotFound/NotFoundPage'));
 const Home = React.lazy(() => import('./pages/Home/Home'));
 
-function App() {
+const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

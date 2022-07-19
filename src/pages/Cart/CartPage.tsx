@@ -6,7 +6,7 @@ import Header from "../../patterns/Header/Header"
 import ReservationItem from '../../components/ReservationItem/ReservationItem'
 import Button from '../../components/Buttons/Button'
 
-function CartPage() {
+const CartPage = () => {
   const { cart } = useContext(CartContext)
 
   if (cart.length === 0) {

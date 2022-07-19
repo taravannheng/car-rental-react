@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import * as ROUTES from '../../constants/routes'
 import Button from '../../components/Buttons/Button'
 
-function ConfirmationPage() {
+const ConfirmationPage = () => {
   return (
     <main className="confirmation">
       <div className="confirmation__overlay"></div>

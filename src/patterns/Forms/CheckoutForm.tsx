@@ -12,7 +12,7 @@ const checkEmailValidity = (val) => {
   return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(val);
 }
 
-function CheckoutForm() {
+const CheckoutForm = () => {
 
   const navigate = useNavigate()
   const { setCart } = useContext(CartContext)
@@ -178,7 +178,8 @@ function CheckoutForm() {
         <input type="email" name="email" id="email" className="input-control__input" required onChange={handleEmail}/>
         <small className="input-control__message"></small>
       </div>
-      <Button type='submit' className={`button--primary button--selected button--block ${!isValidForm && 'button--disabled'}`} disabled={!isValidForm && 'disabled'}>Book</Button>
+      {/* <Button type='submit' className={`button--primary button--selected button--block ${!isValidForm && 'button--disabled'}`} disabled={!isValidForm && 'disabled'}>Book</Button> */}
+      <Button type='submit' className={`button--primary button--selected button--block ${!isValidForm && 'button--disabled'}`}>Book</Button>
     </form>
   )
 }

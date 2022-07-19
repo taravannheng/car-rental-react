@@ -6,7 +6,7 @@ import Button from "../../components/Buttons/Button"
 import * as ROUTES from '../../constants/routes'
 
 
-function SignUpForm() {
+const SignUpForm = () => {
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")

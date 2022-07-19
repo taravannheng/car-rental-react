@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import * as ROUTES from '../../constants/routes'
 import Button from '../../components/Buttons/Button'
 
-function ForgotPasswordConfirmation() {
+const ForgotPasswordConfirmation = () => {
   return (
     <>
       <main className="forgot-password-confirmation">

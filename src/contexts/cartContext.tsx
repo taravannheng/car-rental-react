@@ -1,9 +1,12 @@
-import { useState, createContext } from "react"
+import { FC, ReactNode, useState, createContext } from "react"
 
+interface Props {
+  children: ReactNode;
+}
 
-const CartContext = createContext()
+const CartContext = createContext(null)
 
-const CartProvider = ({ children }) => {
+const CartProvider: FC<Props> = ({ children }) => {
   const [cart, setCart] = useState([])
 
   return <CartContext.Provider value={{

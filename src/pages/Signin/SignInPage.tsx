@@ -1,6 +1,6 @@
 import LogInForm from "../../patterns/Forms/LogInForm"
 
-function LogInPage() {
+const LogInPage = () => {
 
   return (
     <div className='login'>

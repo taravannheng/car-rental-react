@@ -1,9 +1,12 @@
-import { useState, createContext } from "react"
+import { FC, ReactNode, useState, createContext } from "react"
 
+interface Props {
+  children: ReactNode;
+}
 
-const UserAuthContext = createContext()
+const UserAuthContext = createContext(null)
 
-const UserAuthProvider = ({ children }) => {
+const UserAuthProvider: FC<Props> = ({ children }) => {
   const [loggedIn, setLoggedIn] = useState(false)
 
   return <UserAuthContext.Provider value={{
