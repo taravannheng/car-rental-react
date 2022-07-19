@@ -5,7 +5,7 @@ interface Props {
   id?: string;
   className?: string;
   type: "button" | "submit" | "reset";
-  handleClick: () => void;
+  handleClick: (e: any) => void;
 }
 
 const Button: FC<Props> = ({
