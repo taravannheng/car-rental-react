@@ -1,8 +1,8 @@
 import { FC, useContext } from 'react'
 import CartContext from '../../contexts/cartContext';
-import { Props } from '../Cards/ProductCard';
+import ProductDetails from '../../models/ProductDetails';
 
-const ReservationItem: FC<Props> = ({ productDetails }) => {
+const ReservationItem: FC<ProductDetails> = ({ productDetails }) => {
 
   const { setCart } = useContext(CartContext)
 

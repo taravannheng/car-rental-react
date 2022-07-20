@@ -1,25 +1,9 @@
 import { useContext, FC } from 'react'
 import CartContext from "../../contexts/cartContext"
 import Button from '../Buttons/Button'
+import ProductDetails from '../../models/ProductDetails'
 
-export interface Props {
-  productDetails: {
-    id: string,
-    availability: boolean,
-    imgUrl: string,
-    description: string,
-    modelYear: string,
-    model: string,
-    fuelType: string,
-    seats: number,
-    brand: string,
-    mileage: number,
-    pricePerDay: number,
-    category: string,
-  }
-}
-
-const ProductCard: FC<Props> = ({ productDetails }) => {
+const ProductCard: FC<ProductDetails> = ({ productDetails }) => {
 
   const { setCart } = useContext(CartContext)
 

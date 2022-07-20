@@ -1,4 +1,5 @@
 import { FC, ReactNode, useState, createContext } from "react"
+import ProductDetails from '../models/ProductDetails'
 
 interface Props {
   children: ReactNode;
@@ -7,7 +8,7 @@ interface Props {
 const CartContext = createContext(null)
 
 const CartProvider: FC<Props> = ({ children }) => {
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState<ProductDetails[]>([])
 
   return <CartContext.Provider value={{
     cart,

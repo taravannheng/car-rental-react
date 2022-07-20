@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { getFirestore, doc, getDoc } from 'firebase/firestore'
 import Header from '../../patterns/Header/Header'
 import ProductCard from '../../components/Cards/ProductCard'
+import Cars from '../../models/Cars'
 
 const Home = () => {
   // firestore rename: 
@@ -9,7 +10,7 @@ const Home = () => {
   // document: cars -> cars
   // field: imgUrls -> carDetails 
 
-  const [cars, setCars] = useState([])
+  const [cars, setCars] = useState<Cars[]>([])
 
   const db = getFirestore()
 

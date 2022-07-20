@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import * as ROUTES from '../../constants/routes'
 import CartContext from '../../contexts/cartContext'
 import Button from '../../components/Buttons/Button'
+import CheckoutInputs from '../../models/CheckoutInputs'
 
 const checkEmpty = (val) => {
   return val === "" ? true : false
@@ -18,7 +19,7 @@ const CheckoutForm = () => {
   const { setCart } = useContext(CartContext)
 
   const [isValidForm, setIsValidForm] = useState(false)
-  const [userInputs, setUserInputs] = useState([
+  const [userInputs, setUserInputs] = useState<CheckoutInputs[]>([
     {
       name: "firstName",
       value: "",
