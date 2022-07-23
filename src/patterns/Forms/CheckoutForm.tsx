@@ -5,11 +5,11 @@ import CartContext from '../../contexts/cartContext'
 import Button from '../../components/Buttons/Button'
 import CheckoutInputs from '../../models/CheckoutInputs'
 
-const checkEmpty = (val) => {
+const checkEmpty = (val: string) => {
   return val === "" ? true : false
 }
 
-const checkEmailValidity = (val) => {
+const checkEmailValidity = (val: string) => {
   return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(val);
 }
 

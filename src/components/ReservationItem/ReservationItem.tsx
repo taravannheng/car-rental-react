@@ -1,4 +1,4 @@
-import { FC, useContext } from 'react'
+import { FC, MouseEventHandler, useContext } from 'react'
 import CartContext from '../../contexts/cartContext';
 import ProductDetails from '../../models/ProductDetails';
 
@@ -6,7 +6,7 @@ const ReservationItem: FC<ProductDetails> = ({ productDetails }) => {
 
   const { setCart } = useContext(CartContext)
 
-  const handleDelete = (e) => {
+  const handleDelete = (e): void => {
     setCart(cart => (cart.filter((car, index) => car.id !== e.target.closest('.reservation-item').id)))
   }
 

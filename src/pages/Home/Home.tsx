@@ -20,7 +20,7 @@ const Home = () => {
     getDoc(docRef).then((doc) => {
       const { imgUrls } = doc.data()
 
-      setCars(() => (imgUrls))
+      setCars(imgUrls)
     })
 
     // eslint-disable-next-line
