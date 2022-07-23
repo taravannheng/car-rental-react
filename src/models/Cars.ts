@@ -3,7 +3,7 @@ export default interface Cars {
   availability: boolean,
   imgUrl: string,
   description: string,
-  modelYear: string,
+  modelYear: number,
   model: string,
   fuelType: string,
   seats: number,
