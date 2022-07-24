@@ -1,18 +1,17 @@
-import { useState, useContext } from 'react'
+import { useState } from 'react'
 import { useNavigate, Link } from "react-router-dom"
 import DividerWithText from '../../components/Divider/DividerWithText';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import * as ROUTES from '../../constants/routes'
-import UserAuthContext from '../../contexts/userAuthContext';
 import Button from '../../components/Buttons/Button';
+
+import { useDispatch } from 'react-redux';
+import { authActions } from '../../store/auth';
 
 const LogInForm = () => {
   const navigate = useNavigate()
-
   const auth = getAuth()
-
-  const { setLoggedIn } = useContext(UserAuthContext)
-
+  const dispatch = useDispatch();
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
@@ -23,9 +22,7 @@ const LogInForm = () => {
       const userCredential = await signInWithEmailAndPassword(auth, email, password)
 
       if (userCredential.user) {
-
-        setLoggedIn(() => (true))
-
+        dispatch(authActions.login());
         navigate(ROUTES.HOME)
       }
     } catch (error) {

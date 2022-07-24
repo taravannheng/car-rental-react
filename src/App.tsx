@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import * as ROUTES from './constants/routes';
 import { initializeApp } from 'firebase/app';
 
-import { UserAuthProvider } from './contexts/userAuthContext';
-import { CartProvider } from './contexts/cartContext';
 import firebaseConfig from './components/Firebase/firebase';
 import PrivateRoute from './components/Routes/PrivateRoute';
 import Preloader from './components/Preloader/Preloader';
@@ -43,8 +41,6 @@ const App = () => {
       {loading ? (
         <Preloader />
       ) : (
-        <UserAuthProvider>
-          <CartProvider>
             <Router>
               <Routes>
                 <Route
@@ -137,8 +133,6 @@ const App = () => {
                 />
               </Routes>
             </Router>
-          </CartProvider>
-        </UserAuthProvider>
       )}
     </>
   );

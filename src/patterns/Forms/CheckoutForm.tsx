@@ -1,9 +1,11 @@
-import { useState, useContext } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import * as ROUTES from '../../constants/routes'
-import CartContext from '../../contexts/cartContext'
 import Button from '../../components/Buttons/Button'
 import CheckoutInputs from '../../models/CheckoutInputs'
+
+import { useDispatch } from 'react-redux'
+import { cartActions } from '../../store/cart'
 
 const checkEmpty = (val: string) => {
   return val === "" ? true : false
@@ -14,10 +16,8 @@ const checkEmailValidity = (val: string) => {
 }
 
 const CheckoutForm = () => {
-
+  const dispatch = useDispatch();
   const navigate = useNavigate()
-  const { setCart } = useContext(CartContext)
-
   const [isValidForm, setIsValidForm] = useState(false)
   const [userInputs, setUserInputs] = useState<CheckoutInputs[]>([
     {
@@ -156,7 +156,8 @@ const CheckoutForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    setCart(() => ([]))
+    // setCart(() => ([]))
+    dispatch(cartActions.clear());
 
     navigate(ROUTES.CONFIRMATION)
   }

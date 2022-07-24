@@ -1,21 +1,20 @@
-import { useContext, FC } from 'react'
-import CartContext from "../../contexts/cartContext"
+import { FC } from 'react'
 import Button from '../Buttons/Button'
 import ProductDetails from '../../models/ProductDetails'
 
+import { cartActions } from '../../store/cart'
+import { useDispatch } from 'react-redux'
+
 const ProductCard: FC<ProductDetails> = ({ productDetails }) => {
-
-  const { setCart } = useContext(CartContext)
-
+  const dispatch = useDispatch();
   const handleAddToCart = (e) => {
-
     if (productDetails.availability) {
 
       //add or remove product from context
       if (e.target.classList.contains("button--selected")) {
-        setCart(cart => (cart.filter((car, index) => car.id !== productDetails.id)))
+        dispatch(cartActions.remove(productDetails.id));
       } else {
-        setCart(cart => ([...cart, productDetails]))
+        dispatch(cartActions.add(productDetails));
       }
 
       //update the classname

@@ -1,13 +1,13 @@
 import { Link, Navigate } from 'react-router-dom'
 import * as ROUTES from '../../constants/routes'
-import CartContext from '../../contexts/cartContext'
-import { useContext } from 'react'
 import Header from "../../patterns/Header/Header"
 import ReservationItem from '../../components/ReservationItem/ReservationItem'
 import Button from '../../components/Buttons/Button'
 
+import { useSelector } from 'react-redux'
+
 const CartPage = () => {
-  const { cart } = useContext(CartContext)
+  const cart = useSelector<any, any>(state => state.cart.cart);
 
   if (cart.length === 0) {
     return <Navigate to={ROUTES.HOME} />

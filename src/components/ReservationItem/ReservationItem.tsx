@@ -1,13 +1,16 @@
-import { FC, MouseEventHandler, useContext } from 'react'
-import CartContext from '../../contexts/cartContext';
+import { FC } from 'react'
 import ProductDetails from '../../models/ProductDetails';
+
+import { cartActions } from '../../store/cart';
+import { useDispatch } from 'react-redux';
 
 const ReservationItem: FC<ProductDetails> = ({ productDetails }) => {
 
-  const { setCart } = useContext(CartContext)
+  const dispatch = useDispatch();
 
   const handleDelete = (e): void => {
-    setCart(cart => (cart.filter((car, index) => car.id !== e.target.closest('.reservation-item').id)))
+    const carID = e.target.closest('.reservation-item').id;
+    dispatch(cartActions.remove(carID));
   }
 
   return (

@@ -1,19 +1,26 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { useContext } from 'react'
 import { getAuth, signOut } from 'firebase/auth'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons'
 
-import CartContext from '../../contexts/cartContext'
 import * as ROUTES from '../../constants/routes'
 import Button from '../../components/Buttons/Button'
 
+import { useSelector, useDispatch } from 'react-redux'
+import { authActions } from '../../store/auth'
+
 const Header = () => {
-  const { cart } = useContext(CartContext)
+  const cart = useSelector<any, any>(state => state.cart.cart);
+  
+  const dispatch = useDispatch();
+
   const navigate = useNavigate()
   const auth = getAuth();
 
   const signOutHandler = () => {
+    
+    dispatch(authActions.logout());
+
     signOut(auth).then(() => {
       navigate(ROUTES.SIGNIN)
     }).catch((error) => {
